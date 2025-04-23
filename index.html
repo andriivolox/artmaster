@@ -5,23 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtMaster | Зовнішня реклама нового покоління</title>
     <meta name="description" content="ArtMaster – професійне виготовлення та розміщення зовнішньої реклами: білборди, вивіски, LED-екрани та більше. Створюємо яскраві рішення для вашого бізнесу.">
-    <meta name="keywords" content="зовнішня реклама, білборди, вивіски, LED-екрани, неонові вивіски, дизайн реклами, ArtMaster">
     <meta name="author" content="ArtMaster">
     <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.webp" sizes="32x32">
+    <link rel="icon" type="image/webp" href="assets/images/favicon-32x32.webp" sizes="32x32">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
     <meta name="theme-color" content="#FF6200">
     <meta property="og:title" content="ArtMaster - Зовнішня реклама">
     <meta property="og:description" content="Яскраві рішення для вашої реклами: білборди, вивіски, LED-екрани від ArtMaster.">
-    <meta property="og:image" content="https://neo-design.com.ua/assets/images/hero-bg.jpg">
-    <meta property="og:url" content="https://neo-design.com.ua">
+    <meta property="og:image" content="https://artmaster.com.ua/assets/images/hero-bg.jpg">
+    <meta property="og:url" content="https://artmaster.com.ua">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ArtMaster - Зовнішня реклама">
     <meta name="twitter:description" content="Яскраві рішення для вашої реклами: білборди, вивіски, LED-екрани від ArtMaster.">
-    <meta name="twitter:image" content="https://neo-design.com.ua/assets/images/hero-bg.jpg">
+    <meta name="twitter:image" content="https://artmaster.com.ua/assets/images/hero-bg.jpg">
 
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ArtMaster",
+        "url": "https://artmaster.com.ua",
+        "logo": "https://artmaster.com.ua/assets/images/favicon-32x32.webp",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+380674290579",
+            "contactType": "Customer Service",
+            "areaServed": "UA",
+            "availableLanguage": "Ukrainian"
+        },
+        "sameAs": ["https://t.me/NeoDesignUA"]
+    }
+    </script>
+
+    <!-- Google Fonts (локально для продуктивності можна замінити) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -93,6 +112,15 @@
             color: #FF6200;
         }
 
+        .burger {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1A1A1A;
+        }
+
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -117,7 +145,7 @@
         }
 
         .cta-button {
-            background: #FF6200;
+            background: #E05500; /* Покращена контрастність */
             color: #FFFFFF;
             padding: 15px 30px;
             border-radius: 50px;
@@ -127,7 +155,16 @@
         }
 
         .cta-button:hover {
-            background: #E05500;
+            background: #C04800;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
         }
 
         /* Services Section */
@@ -160,6 +197,7 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeIn 0.5s forwards;
+            will-change: transform, opacity;
         }
 
         .service-card:nth-child(2) { animation-delay: 0.1s; }
@@ -212,7 +250,7 @@
 
         .details-button {
             display: inline-block;
-            background: #FF6200;
+            background: #E05500;
             color: #FFFFFF;
             padding: 10px 20px;
             border-radius: 50px;
@@ -222,7 +260,13 @@
         }
 
         .details-button:hover {
-            background: #E05500;
+            background: #C04800;
+        }
+
+        /* About Section */
+        .about ul {
+            list-style: none;
+            padding: 0;
         }
 
         /* Modal */
@@ -260,7 +304,7 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background: #FF6200;
+            background: #E05500;
             color: #FFFFFF;
             border: none;
             border-radius: 50%;
@@ -272,7 +316,7 @@
         }
 
         .close-modal-x:hover {
-            background: #E05500;
+            background: #C04800;
         }
 
         .gallery {
@@ -327,7 +371,7 @@
         }
 
         .thumbnails img.active {
-            border: 2px solid #FF6200;
+            border: 2px solid #E05500;
         }
 
         /* Footer */
@@ -358,7 +402,7 @@
         }
 
         .footer-links a:hover {
-            color: #FF6200;
+            color: #E05500;
         }
 
         .social-links {
@@ -374,7 +418,7 @@
         }
 
         .social-links a:hover {
-            color: #FF6200;
+            color: #E05500;
         }
 
         /* Responsive Design */
@@ -414,23 +458,45 @@
                 gap: 10px;
             }
 
+            .burger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
             .modal-content {
                 padding: 20px;
+                width: 90%;
             }
         }
     </style>
 </head>
 <body>
+    <!-- 
+        Рекомендація для сервера: Додати заголовки безпеки
+        Content-Security-Policy: default-src 'self'; script-src 'self' https://kit.fontawesome.com;
+        X-Content-Type-Options: nosniff;
+    -->
     <nav id="navbar">
         <div class="nav-content">
             <a href="#" class="logo">
                 <img src="assets/images/favicon-32x32.webp" alt="Логотип ArtMaster">
                 ArtMaster
             </a>
+            <button class="burger" aria-label="Відкрити меню">☰</button>
             <div class="nav-links">
-                <a href="#services" onclick="showSection('services')">Послуги</a>
-                <a href="#about" onclick="showSection('about')">Про нас</a>
-                <a href="#contacts" onclick="showSection('contacts')">Контакти</a>
+                <a href="#services" data-section="services">Послуги</a>
+                <a href="#about" data-section="about">Про нас</a>
+                <a href="#contacts" data-section="contacts">Контакти</a>
             </div>
         </div>
     </nav>
@@ -443,11 +509,11 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="services section active" id="services">
         <h2>Наші послуги</h2>
         <div class="services-grid">
-            <div class="service-card" data-type="neon-sign" onclick="showDetails('Комбіновані вивіски', ['assets/images/neon-sign-1.png', 'assets/images/neon-sign-2.png'], 'Неонові вивіски з комбінованим підсвічуванням для яскравого ефекту.')">
-                <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски">
+            <div class="service-card" data-images='["assets/images/neon-sign-1.png", "assets/images/neon-sign-2.png"]' data-description="Неонові вивіски з комбінованим підсвічуванням для яскравого ефекту.">
+                <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски" loading="lazy">
                 <div class="service-card-content">
                     <h3>Комбіновані вивіски</h3>
                     <p>💡 Яскраве неонове підсвічування</p>
@@ -457,8 +523,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="neon-sign" onclick="showDetails('Світлові вивіски', ['assets/images/neon-sign-3.webp', 'assets/images/neon-sign-4.webp'], 'Світлові вивіски для створення унікального стилю.')">
-                <img src="assets/images/neon-sign-3.webp" alt="Світлові вивіски">
+            <div class="service-card" data-images='["assets/images/neon-sign-3.webp", "assets/images/neon-sign-4.webp"]' data-description="Світлові вивіски для створення унікального стилю.">
+                <img src="assets/images/neon-sign-3.webp" alt="Світлові вивіски" loading="lazy">
                 <div class="service-card-content">
                     <h3>Світлові вивіски</h3>
                     <p>💡 Рівномірне світло</p>
@@ -468,8 +534,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="led-screen" onclick="showDetails('LED монохромне табло', ['assets/images/led-screen-1.webp'], 'Монохромні LED табло для чіткої інформації.')">
-                <img src="assets/images/led-screen-1.webp" alt="LED монохромне табло">
+            <div class="service-card" data-images='["assets/images/led-screen-1.webp"]' data-description="Монохромні LED табло для чіткої інформації.">
+                <img src="assets/images/led-screen-1.webp" alt="LED монохромне табло" loading="lazy">
                 <div class="service-card-content">
                     <h3>LED монохромне табло</h3>
                     <p>💡 Чіткий текст</p>
@@ -479,8 +545,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="led-screen" onclick="showDetails('Повноколірний вуличний екран', ['assets/images/led-screen-2.png'], 'Повноколірний екран для яскравої реклами.')">
-                <img src="assets/images/led-screen-2.png" alt="Повноколірний вуличний екран">
+            <div class="service-card" data-images='["assets/images/led-screen-2.png"]' data-description="Повноколірний екран для яскравої реклами.">
+                <img src="assets/images/led-screen-2.png" alt="Повноколірний вуличний екран" loading="lazy">
                 <div class="service-card-content">
                     <h3>Повноколірний вуличний екран</h3>
                     <p>💡 Яскраві кольори</p>
@@ -490,8 +556,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="city-light" onclick="showDetails('Сітілайти', ['assets/images/city-light-1.png'], 'Компактні сітілайти для міського транспорту.')">
-                <img src="assets/images/city-light-1.png" alt="Сітілайти">
+            <div class="service-card" data-images='["assets/images/city-light-1.png"]' data-description="Компактні сітілайти для міського транспорту.">
+                <img src="assets/images/city-light-1.png" alt="Сітілайти" loading="lazy">
                 <div class="service-card-content">
                     <h3>Сітілайти</h3>
                     <p>💡 Компактний формат</p>
@@ -501,8 +567,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="volume-sign" onclick="showDetails('Об’ємні світлові вивіски', ['assets/images/volume-sign-1.png'], 'Об’ємні світлові вивіски для привернення уваги.')">
-                <img src="assets/images/volume-sign-1.png" alt="Об’ємні світлові вивіски">
+            <div class="service-card" data-images='["assets/images/volume-sign-1.png"]' data-description="Об’ємні світлові вивіски для привернення уваги.">
+                <img src="assets/images/volume-sign-1.png" alt="Об’ємні світлові вивіски" loading="lazy">
                 <div class="service-card-content">
                     <h3>Об’ємні світлові вивіски</h3>
                     <p>💡 3D ефект</p>
@@ -512,8 +578,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="banner" onclick="showDetails('Широкоформатний друк', ['assets/images/banner-1.png'], 'Широкоформатний друк для банерів та реклами.')">
-                <img src="assets/images/banner-1.png" alt="Широкоформатний друк">
+            <div class="service-card" data-images='["assets/images/banner-1.png"]' data-description="Широкоформатний друк для банерів та реклами.">
+                <img src="assets/images/banner-1.png" alt="Широкоформатний друк" loading="lazy">
                 <div class="service-card-content">
                     <h3>Широкоформатний друк</h3>
                     <p>💡 Висока якість друку</p>
@@ -523,8 +589,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="banner" onclick="showDetails('Оренда рекламних носіїв', ['assets/images/banner-2.png'], 'Оренда рекламних носіїв для розміщення реклами.')">
-                <img src="assets/images/banner-2.png" alt="Оренда рекламних носіїв">
+            <div class="service-card" data-images='["assets/images/banner-2.png"]' data-description="Оренда рекламних носіїв для розміщення реклами.">
+                <img src="assets/images/banner-2.png" alt="Оренда рекламних носіїв" loading="lazy">
                 <div class="service-card-content">
                     <h3>Оренда рекламних носіїв</h3>
                     <p>💡 Гнучкі терміни</p>
@@ -534,8 +600,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="furniture" onclick="showDetails('Міські меблі', ['assets/images/furniture-1.png'], 'Міські меблі з рекламними вивісками.')">
-                <img src="assets/images/furniture-1.png" alt="Міські меблі">
+            <div class="service-card" data-images='["assets/images/furniture-1.png"]' data-description="Міські меблі з рекламними вивісками.">
+                <img src="assets/images/furniture-1.png" alt="Міські меблі" loading="lazy">
                 <div class="service-card-content">
                     <h3>Міські меблі</h3>
                     <p>💡 Функціональний дизайн</p>
@@ -545,8 +611,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="printing" onclick="showDetails('Вакуумна формовка', ['assets/images/printing-1.png'], 'Вакуумна формовка для створення пластикових виробів.')">
-                <img src="assets/images/printing-1.png" alt="Вакуумна формовка">
+            <div class="service-card" data-images='["assets/images/printing-1.png"]' data-description="Вакуумна формовка для створення пластикових виробів.">
+                <img src="assets/images/printing-1.png" alt="Вакуумна формовка" loading="lazy">
                 <div class="service-card-content">
                     <h3>Вакуумна формовка</h3>
                     <p>💡 Точне формування</p>
@@ -556,8 +622,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="printing" onclick="showDetails('Друк на листових матеріалах', ['assets/images/printing-2.png'], 'Друк на листових матеріалах для реклами.')">
-                <img src="assets/images/printing-2.png" alt="Друк на листових матеріалах">
+            <div class="service-card" data-images='["assets/images/printing-2.png"]' data-description="Друк на листових матеріалах для реклами.">
+                <img src="assets/images/printing-2.png" alt="Друк на листових матеріалах" loading="lazy">
                 <div class="service-card-content">
                     <h3>Друк на листових матеріалах</h3>
                     <p>💡 Стійкість до погодних умов</p>
@@ -567,8 +633,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="printing" onclick="showDetails('Світлова лаконічна реклама', ['assets/images/printing-3.png'], 'Світлова лаконічна реклама для привернення уваги.')">
-                <img src="assets/images/printing-3.png" alt="Світлова лаконічна реклама">
+            <div class="service-card" data-images='["assets/images/printing-3.png"]' data-description="Світлова лаконічна реклама для привернення уваги.">
+                <img src="assets/images/printing-3.png" alt="Світлова лаконічна реклама" loading="lazy">
                 <div class="service-card-content">
                     <h3>Світлова лаконічна реклама</h3>
                     <p>💡 Енергоефективність</p>
@@ -578,8 +644,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="design" onclick="showDetails('Оформлення АЗС', ['assets/images/design-1.png'], 'Оформлення АЗС для створення єдиного стилю.')">
-                <img src="assets/images/design-1.png" alt="Оформлення АЗС">
+            <div class="service-card" data-images='["assets/images/design-1.png"]' data-description="Оформлення АЗС для створення єдиного стилю.">
+                <img src="assets/images/design-1.png" alt="Оформлення АЗС" loading="lazy">
                 <div class="service-card-content">
                     <h3>Оформлення АЗС</h3>
                     <p>💡 Єдиний стиль</p>
@@ -589,8 +655,8 @@
                 </div>
             </div>
 
-            <div class="service-card" data-type="design" onclick="showDetails('Фрезерно-гравіювальні послуги', ['assets/images/design-2.png'], 'Фрезерно-гравіювальні послуги для унікальних елементів.')">
-                <img src="assets/images/design-2.png" alt="Фрезерно-гравіювальні послуги">
+            <div class="service-card" data-images='["assets/images/design-2.png"]' data-description="Фрезерно-гравіювальні послуги для унікальних елементів.">
+                <img src="assets/images/design-2.png" alt="Фрезерно-гравіювальні послуги" loading="lazy">
                 <div class="service-card-content">
                     <h3>Фрезерно-гравіювальні послуги</h3>
                     <p>💡 Висока точність</p>
@@ -602,12 +668,12 @@
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about section" id="about">
         <div class="services">
             <h2>Про ArtMaster</h2>
             <div style="max-width: 800px; margin: 0 auto;">
                 <p>ArtMaster – це команда професіоналів, які створюють яскраві та ефективні рекламні рішення. Ми спеціалізуємося на:</p>
-                <ul style="list-style: none; padding: 0;">
+                <ul>
                     <li>🛠 Виготовлення білбордів, вивісок та банерів</li>
                     <li>🎨 Розробка унікального дизайну</li>
                     <li>📍 Розміщення реклами у вигідних локаціях</li>
@@ -619,7 +685,7 @@
         </div>
     </section>
 
-    <section class="contacts" id="contacts">
+    <section class="contacts section" id="contacts">
         <div class="services">
             <h2>Зв’яжіться з нами</h2>
             <div style="max-width: 600px; margin: 0 auto;">
@@ -631,7 +697,7 @@
         </div>
     </section>
 
-    <div class="modal" id="detailsModal">
+    <div class="modal" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <button class="close-modal-x" onclick="closeModal()" aria-label="Закрити">✖</button>
             <h3 id="modalTitle"></h3>
@@ -648,34 +714,40 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#services" onclick="showSection('services')">Послуги</a>
-                <a href="#about" onclick="showSection('about')">Про нас</a>
-                <a href="#contacts" onclick="showSection('contacts')">Контакти</a>
+                <a href="#services" data-section="services">Послуги</a>
+                <a href="#about" data-section="about">Про нас</a>
+                <a href="#contacts" data-section="contacts">Контакти</a>
             </div>
             <div class="social-links">
-                <a href="https://t.me/NeoDesignUA" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://t.me/NeoDesignUA" target="_blank" aria-label="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.88 8.8c-.14.66-.54.82-.94.42l-2.5-1.92-1.2.74c-.42.26-.76.26-1.06-.04l.18-2.14 6.86-6.2c.3-.28.14-.66-.32-.44l-8.56 5.36-2.26-.68c-.64-.2-.66-.74.02-.98l9.06-3.5c.5-.2.94.14.9.68z"/>
+                    </svg>
+                </a>
             </div>
             <p>&copy; 2025 ArtMaster. Всі права захищено.</p>
         </div>
     </footer>
 
     <script>
-        let currentImageIndex = 0;
-
+        // Управління видимістю секцій
         function showSection(sectionId) {
-            document.querySelectorAll('.services, .about, .contacts').forEach(section => {
-                section.style.display = section.id === sectionId ? 'block' : 'none';
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.toggle('active', section.id === sectionId);
             });
             window.scrollTo({ top: document.getElementById(sectionId).offsetTop - 80, behavior: 'smooth' });
         }
 
+        // Відображення деталей послуги у модальному вікні
         function showDetails(title, images, description) {
             const modal = document.getElementById('detailsModal');
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalDescription').innerText = description;
-
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
             const imagesContainer = document.getElementById('modalImages');
             const thumbnailsContainer = document.getElementById('modalThumbnails');
+
+            modalTitle.innerText = title;
+            modalDescription.innerText = description;
             imagesContainer.innerHTML = '<button class="nav-arrow left" onclick="prevImage()" aria-label="Попереднє зображення">◀</button><button class="nav-arrow right" onclick="nextImage()" aria-label="Наступне зображення">▶</button>';
             thumbnailsContainer.innerHTML = '';
 
@@ -685,13 +757,23 @@
                     img.src = src;
                     img.alt = `Фото реклами ${title} - зображення ${index + 1}`;
                     img.className = index === 0 ? 'active' : '';
+                    img.loading = 'lazy';
+                    img.onerror = () => {
+
+// Запасне зображення буде використано, якщо основне зображення не завантажиться
+                        img.src = 'assets/images/fallback.png';
+                    };
                     imagesContainer.appendChild(img);
 
                     const thumb = document.createElement('img');
                     thumb.src = src;
                     thumb.alt = `Мініатюра реклами ${title} - зображення ${index + 1}`;
                     thumb.className = index === 0 ? 'active' : '';
+                    thumb.loading = 'lazy';
                     thumb.onclick = () => switchImage(index);
+                    thumb.onerror = () => {
+                        thumb.src = 'assets/images/fallback.png';
+                    };
                     thumbnailsContainer.appendChild(thumb);
                 }
             });
@@ -699,16 +781,24 @@
             currentImageIndex = 0;
             updateArrows(images.length);
             modal.style.display = 'flex';
+            modal.querySelector('.modal-content').focus();
 
             modal.onclick = (event) => {
                 if (event.target === modal) closeModal();
             };
         }
 
+        // Закриття модального вікна
         function closeModal() {
-            document.getElementById('detailsModal').style.display = 'none';
+            const modal = document.getElementById('detailsModal');
+            modal.style.display = 'none';
+            document.getElementById('modalImages').innerHTML = '';
+            document.getElementById('modalThumbnails').innerHTML = '';
+            document.getElementById('modalTitle').innerText = '';
+            document.getElementById('modalDescription').innerText = '';
         }
 
+        // Перемикання зображень у модальному вікні
         function switchImage(index) {
             const images = document.querySelectorAll('#modalImages img');
             const thumbs = document.querySelectorAll('#modalThumbnails img');
@@ -720,15 +810,18 @@
             updateArrows(images.length);
         }
 
+        // Попереднє зображення
         function prevImage() {
             if (currentImageIndex > 0) switchImage(currentImageIndex - 1);
         }
 
+        // Наступне зображення
         function nextImage() {
             const images = document.querySelectorAll('#modalImages img');
             if (currentImageIndex < images.length - 1) switchImage(currentImageIndex + 1);
         }
 
+        // Оновлення стрілок навігації
         function updateArrows(totalImages) {
             const leftArrow = document.querySelector('.nav-arrow.left');
             const rightArrow = document.querySelector('.nav-arrow.right');
@@ -736,13 +829,45 @@
             rightArrow.style.display = currentImageIndex === totalImages - 1 ? 'none' : 'block';
         }
 
-        // Navbar scroll effect
+        // Ініціалізація
+        let currentImageIndex = 0;
+        showSection('services');
+
+        // Делегування подій для навігації
+        document.querySelector('nav').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                showSection(link.dataset.section);
+            }
+            if (e.target.classList.contains('burger')) {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+        });
+
+        // Делегування подій для карток
+        document.querySelector('.services-grid').addEventListener('click', (e) => {
+            const card = e.target.closest('.service-card');
+            if (card) {
+                const title = card.querySelector('h3').innerText;
+                const images = JSON.parse(card.dataset.images || '[]');
+                const description = card.dataset.description;
+                showDetails(title, images, description);
+            }
+        });
+
+        // Закриття модального вікна клавішею Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Ефект прокрутки для навігації
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Intersection Observer for animations
+        // Спостерігач для анімацій
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -752,14 +877,6 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.service-card').forEach(card => observer.observe(card));
-
-        // Font Awesome for social icons
-        const fontAwesome = document.createElement('script');
-        fontAwesome.src = 'https://kit.fontawesome.com/a076d05399.js';
-        document.head.appendChild(fontAwesome);
-
-        // Initial section
-        showSection('services');
     </script>
 </body>
 </html>
