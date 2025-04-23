@@ -1,199 +1,231 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Зовнішня реклама ArtMaster | Виготовлення та розміщення реклами</title>
-    <meta name="description" content="Оголошення про послуги зовнішньої реклами від ArtMaster. Виготовлення, розміщення та дизайн рекламних конструкцій за найкращими цінами.">
-    <meta name="keywords" content="зовнішня реклама, виготовлення реклами, рекламні конструкції, білборди, вивіски, Нео Дизайн">
+    <title>ArtMaster | Зовнішня реклама нового покоління</title>
+    <meta name="description" content="ArtMaster – професійне виготовлення та розміщення зовнішньої реклами: білборди, вивіски, LED-екрани та більше. Створюємо яскраві рішення для вашого бізнесу.">
+    <meta name="keywords" content="зовнішня реклама, білборди, вивіски, LED-екрани, неонові вивіски, дизайн реклами, ArtMaster">
     <meta name="author" content="ArtMaster">
     <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.webp" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.webp" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/images/favicon-48x48.webp" sizes="48x48">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
-    <link rel="icon" type="image/png" href="assets/images/android-icon-192x192.webp" sizes="192x192">
-    <link rel="icon" type="image/png" href="assets/images/favicon-256x256.webp" sizes="256x256">
-    <meta name="geo.position" content="49.2320;28.4672">
-    <meta name="geo.region" content="UA-05">
-    <meta name="geo.placename" content="Vinnitsa">
-    <link rel="icon" type="image/png" href="assets/images/favicon.webp" />
-    <meta name="theme-color" content="#ff6200">
+    <meta name="theme-color" content="#FF6200">
     <meta property="og:title" content="ArtMaster - Зовнішня реклама">
-    <meta property="og:description" content="Послуги зовнішньої реклами від ArtMaster. Виготовлення білбордів, вивісок, банерів та інших рекламних конструкцій.">
-    <meta property="og:image" content="https://neo-design.com.ua/assets/images/neo-design-banner.png">
+    <meta property="og:description" content="Яскраві рішення для вашої реклами: білборди, вивіски, LED-екрани від ArtMaster.">
+    <meta property="og:image" content="https://neo-design.com.ua/assets/images/hero-bg.jpg">
     <meta property="og:url" content="https://neo-design.com.ua">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
-    <meta property="og:site_name" content="Нео Дизайн">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ArtMaster - Зовнішня реклама">
-    <meta name="twitter:description" content="Послуги зовнішньої реклами від ArtMaster. Виготовлення білбордів, вивісок, банерів та інших рекламних конструкцій.">
-    <meta name="twitter:image" content="https://neo-design.com.ua/assets/images/neo-design-banner.png">
-    <meta name="twitter:site" content="@NeoDesignUA">
-    <meta name="twitter:creator" content="@NeoDesignUA">
+    <meta name="twitter:description" content="Яскраві рішення для вашої реклами: білборди, вивіски, LED-екрани від ArtMaster.">
+    <meta name="twitter:image" content="https://neo-design.com.ua/assets/images/hero-bg.jpg">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            padding: 80px 0 60px;
-            background-color: #f5f5f5;
-            background-image: url('assets/images/neo-design-bg.webp');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            color: #333;
-            position: relative;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: -1;
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1A1A;
+            background-color: #F8F8F8;
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
-        header {
-            position: fixed;
+
+        /* Navigation */
+        nav {
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
             z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
+            transition: background 0.3s;
         }
-        .header-content {
-            width: 100%;
-            max-width: 400px;
+
+        nav.scrolled {
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
-            font-weight: bold;
-            font-size: 1.2em;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
             display: flex;
             align-items: center;
-            color: #ff6200;
-        }
-        .logo-name {
-            margin-left: 5px;
-        }
-        @media (max-width: 768px) {
-            .logo-name {
-                display: none;
-            }
-        }
-        .search-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .search-bar select {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 150px;
-        }
-        .search-bar button {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #ff6200;
-            color: #fff;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .search-bar button:hover {
-            background-color: #e05500;
-        }
-        .container {
-            max-width: 400px;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 15px 15px 70px 15px;
-            display: none;
-            cursor: pointer;
-            transition: transform 0.2s;
-            position: relative;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-        .container.visible {
-            display: block;
-        }
-        .container:hover {
-            transform: scale(1.03);
-        }
-        .details-button {
-            position: absolute;
-            right: 15px;
-            bottom: 15px;
-            background-color: #ff6200;
-            border: none;
-            min-width: 48px;
-            min-height: 48px;
-            padding: 12px 16px;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            margin: 8px;
-            box-sizing: border-box;
-        }
-        .details-button a {
-            color: #ffffff;
             text-decoration: none;
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            padding: 12px;
-            box-sizing: border-box;
+            color: #FF6200;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
-        .details-button:hover {
-            background-color: #e05500;
-            transform: scale(1.05);
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
         }
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .footer-menu {
+
+        .nav-links {
             display: flex;
-            justify-content: center;
             gap: 20px;
         }
-        .footer-menu a {
+
+        .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            color: #1A1A1A;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6200;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #E05500;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .services h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
         }
-        .footer-menu a:hover {
-            color: #ff6200;
+
+        .service-card:nth-child(2) { animation-delay: 0.1s; }
+        .service-card:nth-child(3) { animation-delay: 0.2s; }
+        .service-card:nth-child(4) { animation-delay: 0.3s; }
+        .service-card:nth-child(5) { animation-delay: 0.4s; }
+        .service-card:nth-child(6) { animation-delay: 0.5s; }
+        .service-card:nth-child(7) { animation-delay: 0.6s; }
+        .service-card:nth-child(8) { animation-delay: 0.7s; }
+        .service-card:nth-child(9) { animation-delay: 0.8s; }
+        .service-card:nth-child(10) { animation-delay: 0.9s; }
+        .service-card:nth-child(11) { animation-delay: 1s; }
+        .service-card:nth-child(12) { animation-delay: 1.1s; }
+        .service-card:nth-child(13) { animation-delay: 1.2s; }
+        .service-card:nth-child(14) { animation-delay: 1.3s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .details-button {
+            display: inline-block;
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .details-button:hover {
+            background: #E05500;
+        }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -201,67 +233,89 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 2000;
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 90%;
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 800px;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
         }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal-x {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #FF6200;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            line-height: 30px;
+        }
+
+        .close-modal-x:hover {
+            background: #E05500;
+        }
+
         .gallery {
             position: relative;
-            width: 100%;
-            max-width: 800px;
             margin-bottom: 20px;
         }
+
         .gallery img {
             width: 100%;
-            height: auto;
-            max-height: 60vh;
+            max-height: 400px;
             object-fit: contain;
-            border-radius: 5px;
+            border-radius: 8px;
             display: none;
         }
+
         .gallery img.active {
             display: block;
         }
+
         .nav-arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFFFFF;
             border: none;
             padding: 10px;
             cursor: pointer;
             font-size: 20px;
             border-radius: 50%;
         }
-        .nav-arrow.left {
-            left: 10px;
-        }
-        .nav-arrow.right {
-            right: 10px;
-        }
-        .nav-arrow:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+
+        .nav-arrow.left { left: 10px; }
+        .nav-arrow.right { right: 10px; }
+        .nav-arrow:hover { background: rgba(0, 0, 0, 0.8); }
+
         .thumbnails {
             display: flex;
             gap: 10px;
-            flex-wrap: wrap;
             justify-content: center;
-            margin-top: 10px;
+            flex-wrap: wrap;
         }
+
         .thumbnails img {
             width: 80px;
             height: 60px;
@@ -269,282 +323,339 @@
             border-radius: 5px;
             cursor: pointer;
             border: 2px solid transparent;
+            transition: border 0.3s;
         }
+
         .thumbnails img.active {
-            border: 2px solid #ff6200;
+            border: 2px solid #FF6200;
         }
-        .close-modal {
-            margin-top: 15px;
-            padding: 5px 10px;
-            background-color: #ff6200;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .close-modal:hover {
-            background-color: #e05500;
-        }
-        .close-modal-x {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #ffffff;
-            color: #000000;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            font-size: 18px;
-            cursor: pointer;
-            line-height: 30px;
+
+        /* Footer */
+        footer {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            padding: 40px 20px;
             text-align: center;
         }
-        .close-modal-x:hover {
-            background-color: #e0e0e0;
-            color: #000000;
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .seo-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
         }
-        #no-results {
-            max-width: 400px;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            text-align: center;
-            display: none;
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
         }
-        #no-results.visible {
-            display: block;
+
+        .footer-links a:hover {
+            color: #FF6200;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FF6200;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .services h2 {
+                font-size: 2rem;
+            }
+
+            .service-card img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <button class="logo" onclick="showSection('services')" aria-label="Показати список послуг">
-    <img src="assets/images/favicon-32x32.webp" alt="Логотип Нео Дизайн" width="32" height="32"> 
-    <span class="logo-name">Нео Дизайн</span>
-</button>
-            <h1 class="seo-hidden">Зовнішня реклама Нео Дизайн</h1>
-            <div class="search-bar">
-                <select id="searchType">
-                    <option value="">Тип послуги</option>
-                    <option value="neon-sign">Неонові вивіски</option>
-                    <option value="led-screen">LED екрани</option>
-                    <option value="city-light">Сітілайти</option>
-                    <option value="volume-sign">Об'ємні вивіски</option>
-                    <option value="banner">Банери</option>
-                    <option value="furniture">Міські меблі</option>
-                    <option value="printing">Друк</option>
-                    <option value="design">Дизайн</option>
-                </select>
-                <button onclick="searchServices()">🔍</button>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="assets/images/favicon-32x32.webp" alt="Логотип ArtMaster">
+                ArtMaster
+            </a>
+            <div class="nav-links">
+                <a href="#services" onclick="showSection('services')">Послуги</a>
+                <a href="#about" onclick="showSection('about')">Про нас</a>
+                <a href="#contacts" onclick="showSection('contacts')">Контакти</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <div id="services">
-        <h2 class="seo-hidden">Послуги зовнішньої реклами</h2>
-
-        <div class="container visible" data-type="neon-sign" onclick="showDetails('Комбіновані вивіски', ['assets/images/neon-sign-1.png', 'assets/images/neon-sign-2.png'], 'Неонові вивіски з комбінованим підсвічуванням для яскравого ефекту.')">
-            <h3>Комбіновані вивіски</h3>
-            <p>💡 Особливість: Яскраве неонове підсвічування</p>
-            <p>🎯 Для магазинів та кафе</p>
-            <p>🛠 Матеріал: Акрил, неон</p>
-            <button class="details-button">
-                <a href="#details-1">Детальніше</a>
-            </button>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Яскрава реклама для вашого бізнесу</h1>
+            <p>ArtMaster створює незабутні білборди, вивіски та LED-екрани, які привертають увагу та підвищують впізнаваність бренду.</p>
+            <a href="#contacts" class="cta-button">Замовити зараз</a>
         </div>
+    </section>
 
-        <div class="container visible" data-type="neon-sign" onclick="showDetails('Світлові вивіски', ['assets/images/neon-sign-3.webp', 'assets/images/neon-sign-4.webp'], 'Світлові вивіски для створення унікального стилю.')">
-            <h3>Світлові вивіски</h3>
-            <p>💡 Особливість: Рівномірне світло</p>
-            <p>🎯 Для салонів та офісів</p>
-            <p>🛠 Матеріал: Акрил, LED</p>
-            <button class="details-button">
-                <a href="#details-2">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="led-screen" onclick="showDetails('LED монохромне табло', ['assets/images/led-screen-1.webp'], 'Монохромні LED табло для чіткої інформації.')">
-            <h3>LED монохромне табло</h3>
-            <p>💡 Особливість: Чіткий текст</p>
-            <p>🎯 Для інформ. повідомлень</p>
-            <p>🛠 Матеріал: LED модулі</p>
-            <button class="details-button">
-                <a href="#details-3">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="led-screen" onclick="showDetails('Повноколірний вуличний екран', ['assets/images/led-screen-2.png'], 'Повноколірний екран для яскравої реклами.')">
-            <h3>Повноколірний вуличний екран</h3>
-            <p>💡 Особливість: Яскраві кольори</p>
-            <p>🎯 Для вуличної реклами</p>
-            <p>🛠 Матеріал: LED модулі</p>
-            <button class="details-button">
-                <a href="#details-4">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="city-light" onclick="showDetails('Вивіски в метро, міські меблі', ['assets/images/city-light-1.png'], 'Вивіски в метро та міські меблі для реклами.')">
-            <h3>Вивіски з металу, міські меблі</h3>
-            <p>💡 Особливість: Компактний формат</p>
-            <p>🎯 Для міського транспорту</p>
-            <p>🛠 Матеріал: Алюміній, скло</p>
-            <button class="details-button">
-                <a href="#details-5">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="volume-sign" onclick="showDetails('Об’ємні світлові вивіски', ['assets/images/volume-sign-1.png'], 'Об’ємні світлові вивіски для привернення уваги.')">
-            <h3>Об’ємні світлові вивіски</h3>
-            <p>💡 Особливість: 3D ефект</p>
-            <p>🎯 Для торгових центрів</p>
-            <p>🛠 Матеріал: Акрил, LED</p>
-            <button class="details-button">
-                <a href="#details-6">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="banner" onclick="showDetails('Широкоформатний друк', ['assets/images/banner-1.png'], 'Широкоформатний друк для банерів та реклами.')">
-            <h3>Широкоформатний друк</h3>
-            <p>💡 Особливість: Висока якість друку</p>
-            <p>🎯 Для зовнішньої реклами</p>
-            <p>🛠 Матеріал: ПВХ</p>
-            <button class="details-button">
-                <a href="#details-7">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="banner" onclick="showDetails('Оренда рекламних носіїв', ['assets/images/banner-2.png'], 'Оренда рекламних носіїв для розміщення реклами.')">
-            <h3>Оренда рекламних носіїв</h3>
-            <p>💡 Особливість: Гнучкі терміни</p>
-            <p>🎯 Для тимчасових кампаній</p>
-            <p>🛠 Матеріал: Вініл</p>
-            <button class="details-button">
-                <a href="#details-8">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="furniture" onclick="showDetails('Вивіски в метро, міські меблі', ['assets/images/furniture-1.png'], 'Міські меблі з рекламними вивісками.')">
-            <h3>Вивіски в метро, міські меблі</h3>
-            <p>💡 Особливість: Функціональний дизайн</p>
-            <p>🎯 Для громадських місць</p>
-            <p>🛠 Матеріал: Алюміній, LED</p>
-            <button class="details-button">
-                <a href="#details-9">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="printing" onclick="showDetails('Вакуумна формовка пластикових виробів', ['assets/images/printing-1.png'], 'Вакуумна формовка для створення пластикових виробів.')">
-            <h3>Вакуумна формовка пластикових виробів</h3>
-            <p>💡 Особливість: Точне формування</p>
-            <p>🎯 Для створення об’ємних елементів</p>
-            <p>🛠 Матеріал: Пластик</p>
-            <button class="details-button">
-                <a href="#details-10">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="printing" onclick="showDetails('Друк на листових матеріалах', ['assets/images/printing-2.png'], 'Друк на листових матеріалах для реклами.')">
-            <h3>Друк на листових матеріалах</h3>
-            <p>💡 Особливість: Стійкість до погодних умов</p>
-            <p>🎯Для зовнішньої реклами</p>
-            <p>🛠 Матеріал: Пластик</p>
-            <button class="details-button">
-                <a href="#details-11">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="printing" onclick="showDetails('Світлова лаконічна реклама', ['assets/images/printing-3.png'], 'Світлова лаконічна реклама для привернення уваги.')">
-            <h3>Світлова лаконічна реклама</h3>
-            <p>💡 Особливість: Енергоефективність</p>
-            <p>🎯 Для невеликих вивісок</p>
-            <p>🛠 Матеріал: Акрил, LED</p>
-            <button class="details-button">
-                <a href="#details-12">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="design" onclick="showDetails('Оформлення АЗС', ['assets/images/design-1.png'], 'Оформлення АЗС для створення єдиного стилю.')">
-            <h3>Оформлення АЗС</h3>
-            <p>💡 Особливість: Єдиний стиль</p>
-            <p>🎯 Для брендування АЗС</p>
-            <p>🛠 Матеріал: Алюміній, LED</p>
-            <button class="details-button">
-                <a href="#details-13">Детальніше</a>
-            </button>
-        </div>
-
-        <div class="container visible" data-type="design" onclick="showDetails('Фрезерно-гравіювальні послуги', ['assets/images/design-2.png'], 'Фрезерно-гравіювальні послуги для створення унікальних елементів.')">
-            <h3>Фрезерно-гравіювальні послуги</h3>
-            <p>💡 Особливість: Висока точність</p>
-            <p>🎯 Для створення декоративних елементів</p>
-            <p>🛠 Матеріал: Алюміній</p>
-            <button class="details-button">
-                <a href="#details-14">Детальніше</a>
-            </button>
-        </div>
-
-        <div id="no-results">
-            <p>Нічого не знайдено</p>
-        </div>
-    </div>
-
-    <div id="about" class="container">
+    <section class="services" id="services">
         <h2>Наші послуги</h2>
-        <p><h3>📢 Виготовлення зовнішньої реклами</h3></p>
-        <p>- 🛠 Створення білбордів, вивісок, банерів та інших рекламних конструкцій.</p>
-        <p><h3>🎨 Дизайн реклами</h3></p>
-        <p>- ✍️ Розробка унікального дизайну для вашої реклами.</p>
-        <p><h3>📍 Розміщення реклами</h3></p>
-        <p>- 🗺 Організація розміщення рекламних матеріалів у вигідних локаціях.</p>
-        <p><h3>⚙️ Монтаж та обслуговування</h3></p>
-        <p>- 🔧 Встановлення та технічне обслуговування рекламних конструкцій.</p>
-        <p><h3>📈 Консультації з маркетингу</h3></p>
-        <p>- 💡 Допомога у виборі оптимального формату реклами для вашого бізнесу.</p>
-    </div>
+        <div class="services-grid">
+            <div class="service-card" data-type="neon-sign" onclick="showDetails('Комбіновані вивіски', ['assets/images/neon-sign-1.png', 'assets/images/neon-sign-2.png'], 'Неонові вивіски з комбінованим підсвічуванням для яскравого ефекту.')">
+                <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски">
+                <div class="service-card-content">
+                    <h3>Комбіновані вивіски</h3>
+                    <p>💡 Яскраве неонове підсвічування</p>
+                    <p>🎯 Для магазинів та кафе</p>
+                    <p>🛠 Акрил, неон</p>
+                    <a href="#details-1" class="details-button">Детальніше</a>
+                </div>
+            </div>
 
-    <div id="contacts" class="container">
-        <h2>Контакти</h2>
-        <p>📞 Телефон: <a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
-        <p>📱 Viber: +38 (067) 429-05-79</p>
-        <p>❔ Маєте запитання чи потрібна додаткова інформація? 😊 Ми завжди раді допомогти!</p>
-        <p>🌐 Приєднуйтесь до нашого <a href="https://t.me/NeoDesignUA" target="_blank">телеграм-каналу</a>!</p>
-    </div>
+            <div class="service-card" data-type="neon-sign" onclick="showDetails('Світлові вивіски', ['assets/images/neon-sign-3.webp', 'assets/images/neon-sign-4.webp'], 'Світлові вивіски для створення унікального стилю.')">
+                <img src="assets/images/neon-sign-3.webp" alt="Світлові вивіски">
+                <div class="service-card-content">
+                    <h3>Світлові вивіски</h3>
+                    <p>💡 Рівномірне світло</p>
+                    <p>🎯 Для салонів та офісів</p>
+                    <p>🛠 Акрил, LED</p>
+                    <a href="#details-2" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="led-screen" onclick="showDetails('LED монохромне табло', ['assets/images/led-screen-1.webp'], 'Монохромні LED табло для чіткої інформації.')">
+                <img src="assets/images/led-screen-1.webp" alt="LED монохромне табло">
+                <div class="service-card-content">
+                    <h3>LED монохромне табло</h3>
+                    <p>💡 Чіткий текст</p>
+                    <p>🎯 Для інформ. повідомлень</p>
+                    <p>🛠 LED модулі</p>
+                    <a href="#details-3" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="led-screen" onclick="showDetails('Повноколірний вуличний екран', ['assets/images/led-screen-2.png'], 'Повноколірний екран для яскравої реклами.')">
+                <img src="assets/images/led-screen-2.png" alt="Повноколірний вуличний екран">
+                <div class="service-card-content">
+                    <h3>Повноколірний вуличний екран</h3>
+                    <p>💡 Яскраві кольори</p>
+                    <p>🎯 Для вуличної реклами</p>
+                    <p>🛠 LED модулі</p>
+                    <a href="#details-4" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="city-light" onclick="showDetails('Сітілайти', ['assets/images/city-light-1.png'], 'Компактні сітілайти для міського транспорту.')">
+                <img src="assets/images/city-light-1.png" alt="Сітілайти">
+                <div class="service-card-content">
+                    <h3>Сітілайти</h3>
+                    <p>💡 Компактний формат</p>
+                    <p>🎯 Для міського транспорту</p>
+                    <p>🛠 Алюміній, скло</p>
+                    <a href="#details-5" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="volume-sign" onclick="showDetails('Об’ємні світлові вивіски', ['assets/images/volume-sign-1.png'], 'Об’ємні світлові вивіски для привернення уваги.')">
+                <img src="assets/images/volume-sign-1.png" alt="Об’ємні світлові вивіски">
+                <div class="service-card-content">
+                    <h3>Об’ємні світлові вивіски</h3>
+                    <p>💡 3D ефект</p>
+                    <p>🎯 Для торгових центрів</p>
+                    <p>🛠 Акрил, LED</p>
+                    <a href="#details-6" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="banner" onclick="showDetails('Широкоформатний друк', ['assets/images/banner-1.png'], 'Широкоформатний друк для банерів та реклами.')">
+                <img src="assets/images/banner-1.png" alt="Широкоформатний друк">
+                <div class="service-card-content">
+                    <h3>Широкоформатний друк</h3>
+                    <p>💡 Висока якість друку</p>
+                    <p>🎯 Для зовнішньої реклами</p>
+                    <p>🛠 ПВХ</p>
+                    <a href="#details-7" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="banner" onclick="showDetails('Оренда рекламних носіїв', ['assets/images/banner-2.png'], 'Оренда рекламних носіїв для розміщення реклами.')">
+                <img src="assets/images/banner-2.png" alt="Оренда рекламних носіїв">
+                <div class="service-card-content">
+                    <h3>Оренда рекламних носіїв</h3>
+                    <p>💡 Гнучкі терміни</p>
+                    <p>🎯 Для тимчасових кампаній</p>
+                    <p>🛠 Вініл</p>
+                    <a href="#details-8" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="furniture" onclick="showDetails('Міські меблі', ['assets/images/furniture-1.png'], 'Міські меблі з рекламними вивісками.')">
+                <img src="assets/images/furniture-1.png" alt="Міські меблі">
+                <div class="service-card-content">
+                    <h3>Міські меблі</h3>
+                    <p>💡 Функціональний дизайн</p>
+                    <p>🎯 Для громадських місць</p>
+                    <p>🛠 Алюміній, LED</p>
+                    <a href="#details-9" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="printing" onclick="showDetails('Вакуумна формовка', ['assets/images/printing-1.png'], 'Вакуумна формовка для створення пластикових виробів.')">
+                <img src="assets/images/printing-1.png" alt="Вакуумна формовка">
+                <div class="service-card-content">
+                    <h3>Вакуумна формовка</h3>
+                    <p>💡 Точне формування</p>
+                    <p>🎯 Для об’ємних елементів</p>
+                    <p>🛠 Пластик</p>
+                    <a href="#details-10" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="printing" onclick="showDetails('Друк на листових матеріалах', ['assets/images/printing-2.png'], 'Друк на листових матеріалах для реклами.')">
+                <img src="assets/images/printing-2.png" alt="Друк на листових матеріалах">
+                <div class="service-card-content">
+                    <h3>Друк на листових матеріалах</h3>
+                    <p>💡 Стійкість до погодних умов</p>
+                    <p>🎯 Для зовнішньої реклами</p>
+                    <p>🛠 Пластик</p>
+                    <a href="#details-11" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="printing" onclick="showDetails('Світлова лаконічна реклама', ['assets/images/printing-3.png'], 'Світлова лаконічна реклама для привернення уваги.')">
+                <img src="assets/images/printing-3.png" alt="Світлова лаконічна реклама">
+                <div class="service-card-content">
+                    <h3>Світлова лаконічна реклама</h3>
+                    <p>💡 Енергоефективність</p>
+                    <p>🎯 Для невеликих вивісок</p>
+                    <p>🛠 Акрил, LED</p>
+                    <a href="#details-12" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="design" onclick="showDetails('Оформлення АЗС', ['assets/images/design-1.png'], 'Оформлення АЗС для створення єдиного стилю.')">
+                <img src="assets/images/design-1.png" alt="Оформлення АЗС">
+                <div class="service-card-content">
+                    <h3>Оформлення АЗС</h3>
+                    <p>💡 Єдиний стиль</p>
+                    <p>🎯 Для брендування АЗС</p>
+                    <p>🛠 Алюміній, LED</p>
+                    <a href="#details-13" class="details-button">Детальніше</a>
+                </div>
+            </div>
+
+            <div class="service-card" data-type="design" onclick="showDetails('Фрезерно-гравіювальні послуги', ['assets/images/design-2.png'], 'Фрезерно-гравіювальні послуги для унікальних елементів.')">
+                <img src="assets/images/design-2.png" alt="Фрезерно-гравіювальні послуги">
+                <div class="service-card-content">
+                    <h3>Фрезерно-гравіювальні послуги</h3>
+                    <p>💡 Висока точність</p>
+                    <p>🎯 Для декоративних елементів</p>
+                    <p>🛠 Алюміній</p>
+                    <a href="#details-14" class="details-button">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="services">
+            <h2>Про ArtMaster</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p>ArtMaster – це команда професіоналів, які створюють яскраві та ефективні рекламні рішення. Ми спеціалізуємося на:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>🛠 Виготовлення білбордів, вивісок та банерів</li>
+                    <li>🎨 Розробка унікального дизайну</li>
+                    <li>📍 Розміщення реклами у вигідних локаціях</li>
+                    <li>⚙️ Монтаж та технічне обслуговування</li>
+                    <li>📈 Консультації з маркетингу</li>
+                </ul>
+                <p>Довірте нам ваш бренд, і ми зробимо його помітним!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="services">
+            <h2>Зв’яжіться з нами</h2>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <p>📞 <a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
+                <p>📱 Viber: +38 (067) 429-05-79</p>
+                <p>🌐 <a href="https://t.me/NeoDesignUA" target="_blank">Telegram</a></p>
+                <p>Маєте запитання? Ми завжди готові допомогти!</p>
+            </div>
+        </div>
+    </section>
 
     <div class="modal" id="detailsModal">
         <div class="modal-content">
-            <button class="close-modal-x" onclick="closeModal()">✖</button>
+            <button class="close-modal-x" onclick="closeModal()" aria-label="Закрити">✖</button>
             <h3 id="modalTitle"></h3>
             <div class="gallery" id="modalImages">
-                <button class="nav-arrow left" onclick="prevImage()">◀</button>
-                <button class="nav-arrow right" onclick="nextImage()">▶</button>
+                <button class="nav-arrow left" onclick="prevImage()" aria-label="Попереднє зображення">◀</button>
+                <button class="nav-arrow right" onclick="nextImage()" aria-label="Наступне зображення">▶</button>
             </div>
             <div class="thumbnails" id="modalThumbnails"></div>
             <p id="modalDescription"></p>
-            <p>📞 <strong>Зв'яжіться з нами для замовлення або додаткової інформації!</strong></p>
-            <p><a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
-            <button class="close-modal" onclick="closeModal()">Закрити</button>
+            <p>📞 <strong>Зв'яжіться для замовлення:</strong> <a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
         </div>
     </div>
 
     <footer>
-        <div class="footer-menu">
-            <a href="#services" onclick="showSection('services')">Головна</a>
-            <a href="#about" onclick="showSection('about')">Наші послуги</a>
-            <a href="#contacts" onclick="showSection('contacts')">Контакти</a>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#services" onclick="showSection('services')">Послуги</a>
+                <a href="#about" onclick="showSection('about')">Про нас</a>
+                <a href="#contacts" onclick="showSection('contacts')">Контакти</a>
+            </div>
+            <div class="social-links">
+                <a href="https://t.me/NeoDesignUA" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+            <p>&copy; 2025 ArtMaster. Всі права захищено.</p>
         </div>
     </footer>
 
@@ -552,37 +663,10 @@
         let currentImageIndex = 0;
 
         function showSection(sectionId) {
-            document.querySelectorAll('.container').forEach(container => {
-                container.classList.remove('visible');
+            document.querySelectorAll('.services, .about, .contacts').forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
             });
-            document.getElementById('no-results').classList.remove('visible');
-
-            if (sectionId === 'services') {
-                document.querySelectorAll('#services .container').forEach(container => {
-                    container.classList.add('visible');
-                });
-            } else {
-                document.getElementById(sectionId).classList.add('visible');
-            }
-        }
-
-        function searchServices() {
-            const searchType = document.getElementById('searchType').value;
-            const services = document.querySelectorAll('#services .container');
-            const noResults = document.getElementById('no-results');
-            let hasResults = false;
-
-            services.forEach(service => {
-                const type = service.getAttribute('data-type');
-                if (searchType === "" || type === searchType) {
-                    service.classList.add('visible');
-                    hasResults = true;
-                } else {
-                    service.classList.remove('visible');
-                }
-            });
-
-            noResults.classList.toggle('visible', !hasResults);
+            window.scrollTo({ top: document.getElementById(sectionId).offsetTop - 80, behavior: 'smooth' });
         }
 
         function showDetails(title, images, description) {
@@ -592,7 +676,7 @@
 
             const imagesContainer = document.getElementById('modalImages');
             const thumbnailsContainer = document.getElementById('modalThumbnails');
-            imagesContainer.innerHTML = '<button class="nav-arrow left" onclick="prevImage()">◀</button><button class="nav-arrow right" onclick="nextImage()">▶</button>';
+            imagesContainer.innerHTML = '<button class="nav-arrow left" onclick="prevImage()" aria-label="Попереднє зображення">◀</button><button class="nav-arrow right" onclick="nextImage()" aria-label="Наступне зображення">▶</button>';
             thumbnailsContainer.innerHTML = '';
 
             images.forEach((src, index) => {
@@ -616,10 +700,8 @@
             updateArrows(images.length);
             modal.style.display = 'flex';
 
-            modal.onclick = function(event) {
-                if (event.target === modal) {
-                    closeModal();
-                }
+            modal.onclick = (event) => {
+                if (event.target === modal) closeModal();
             };
         }
 
@@ -639,16 +721,12 @@
         }
 
         function prevImage() {
-            if (currentImageIndex > 0) {
-                switchImage(currentImageIndex - 1);
-            }
+            if (currentImageIndex > 0) switchImage(currentImageIndex - 1);
         }
 
         function nextImage() {
             const images = document.querySelectorAll('#modalImages img');
-            if (currentImageIndex < images.length - 1) {
-                switchImage(currentImageIndex + 1);
-            }
+            if (currentImageIndex < images.length - 1) switchImage(currentImageIndex + 1);
         }
 
         function updateArrows(totalImages) {
@@ -658,14 +736,30 @@
             rightArrow.style.display = currentImageIndex === totalImages - 1 ? 'none' : 'block';
         }
 
-        showSection('services');
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && document.getElementById('detailsModal').style.display === 'flex') {
-                closeModal();
-            }
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
-    </script>
 
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card').forEach(card => observer.observe(card));
+
+        // Font Awesome for social icons
+        const fontAwesome = document.createElement('script');
+        fontAwesome.src = 'https://kit.fontawesome.com/a076d05399.js';
+        document.head.appendChild(fontAwesome);
+
+        // Initial section
+        showSection('services');
+    </script>
 </body>
 </html>
