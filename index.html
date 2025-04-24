@@ -105,7 +105,10 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, #FF6200 0%, #1A1A1A 100%);
+            background-image: url('assets/images/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -471,19 +474,18 @@
         </div>
     </nav>
 
-   <section class="hero">
-    <div class="hero-content">
-        <h1>Яскрава реклама для вашого бізнесу</h1>
-        <p>ArtMitin створює незабутні білборди, вивіски та LED-екрани, які привертають увагу та підвищують впізнаваність бренду.</p>
-        <a href="tel:+380674290579" class="cta-button">📞 Замовити зараз</a>
-    </div>
-</section>
-
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Яскрава реклама для вашого бізнесу</h1>
+            <p>ArtMitin створює незабутні білборди, вивіски та LED-екрани, які привертають увагу та підвищують впізнаваність бренду.</p>
+            <a href="tel:+380674290579" class="cta-button">📞 Замовити зараз</a>
+        </div>
+    </section>
 
     <section class="services section active" id="services">
         <h2>Наші послуги</h2>
         <div class="services-grid">
-            <div class="service-card" data-type="neon-sign" data-images='["assets/images/neon-sign-1.png", "assets/images/neon-sign-2.png"]' data-description="Неонові вивіски з комбінованим підсвічуванням для яскравого ефекту.">
+            <div class="service-card" data-type="neon-sign" data-images='["assets/images/neon-sign-1.png", "assets/images/neon-sign-2.png"]' data-description="Неонові вивіски з комбінованим підсвічуванням для яркого ефекту.">
                 <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски" loading="lazy">
                 <div class="service-card-content">
                     <h3>Комбіновані вивіски</h3>
@@ -603,8 +605,6 @@
                     <a href="#details-13" class="details-button">Детальніше</a>
                 </div>
             </div>
-
-            
         </div>
     </section>
 
@@ -617,7 +617,7 @@
                     <li>🛠 Виготовлення білбордів, вивісок та банерів</li>
                     <li>🎨 Розробка унікального дизайну</li>
                     <li>📍 Розміщення реклами у вигідних локаціях</li>
-                    <li>⚙️ Монтаж та технічне обслуговування</li>
+                    <li>⚙️ Монтаж та технічне облуговування</li>
                     <li>📈 Консультації з маркетингу</li>
                 </ul>
                 <p>Довірте нам ваш бренд, і ми зробимо його помітним!</p>
@@ -817,6 +817,5 @@
         // Initial section
         showSection('services');
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'934e5f212a32453b',t:'MTc0NTQyMTkwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
