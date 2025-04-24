@@ -130,17 +130,24 @@
         }
 
         .cta-button {
-            background: #FF6200;
-            color: #FFFFFF;
             padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ff69b4; /* Рожевий колір тексту */
+            background: transparent;
+            border: 3px solid #00ddeb; /* Блакитний контур */
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #00ddeb, 0 0 20px #00ddeb, 0 0 30px #00ddeb; /* Неоновий ефект */
+            text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4; /* Тінь тексту */
         }
 
         .cta-button:hover {
-            background: #E05500;
+            color: #ffffff; /* Білий колір тексту963 при наведенні */
+            box-shadow: 0 0 20px #00ddeb, 0 0 40px #00ddeb, 0 0 60px #00ddeb;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
         }
 
         /* Sections */
@@ -432,12 +439,18 @@
             }
 
             .nav-content {
-                flex-direction: column;
-                gap: 10px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 1;
             }
 
             .burger {
                 display: block;
+                order: 2;
             }
 
             .nav-links {
@@ -445,6 +458,12 @@
                 flex-direction: column;
                 width: 100%;
                 text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #FFFFFF;
+                padding: 10px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
             .nav-links.active {
