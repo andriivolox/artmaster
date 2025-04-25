@@ -1,0 +1,457 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtMitin | Про нас</title>
+    <meta name="description" content="Дізнайтесь більше про ArtMitin – команду професіоналів, що створює яскраві рекламні рішення вже 14 років.">
+    <meta name="keywords" content="ArtMitin, зовнішня реклама, про нас, рекламні рішення, Україна">
+    <meta name="author" content="ArtMitin">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
+    <meta name="theme-color" content="#FF6200">
+    <meta property="og:title" content="ArtMitin - Про нас">
+    <meta property="og:description" content="ArtMitin – ваш партнер у створенні яскравих рекламних рішень. Дізнайтесь про наш досвід та послуги.">
+    <meta property="og:image" content="https://andriivolox.github.io/artmaster/hero-bg.webp">
+    <meta property="og:url" content="https://andriivolox.github.io/artmaster/about">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtMitin - Про нас">
+    <meta name="twitter:description" content="ArtMitin – ваш партнер у створенні яскравих рекламних рішень. Дізнайтесь про наш досвід та послуги.">
+    <meta name="twitter:image" content="https://andriivolox.github.io/artmaster/hero-bg.webp">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1A1A;
+            background-color: #F8F8F8;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #FF6200;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1A1A1A;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6200;
+        }
+
+        .burger {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1A1A1A;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background-image: url('assets/images/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .about h2 {
+            font-family:emi 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        .about-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .about-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .about-content ul li:before {
+            content: '✓';
+            color: #FF6200;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background: #E05500;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #FF6200;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FF6200;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about h2 {
+                font-size: 2rem;
+            }
+
+            .about-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 1;
+            }
+
+            .burger {
+                display: block;
+                order: 2;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #FFFFFF;
+                padding: 10px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .about-content {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
+                ArtMitin
+            </a>
+            <button class="burger" aria-label="Відкрити меню">☰</button>
+            <div class="nav-links">
+                <a href="index.html#services" data-section="services">Послуги</a>
+                <a href="about.html" data-section="about">Про нас</a>
+                <a href="index.html#contacts" data-section="contacts">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Про ArtMitin</h1>
+            <p>Команда професіоналів, що створює яскраві рекламні рішення вже 14 років.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>ArtMitin: Ваш партнер у рекламі</h2>
+        <div class="about-content">
+            <p><strong>ArtMitin</strong> – це українська компанія, яка вже 14 років успішно працює на ринку реклами, створюючи ефективні та креативні рішення для бізнесу. Наша команда професіоналів поєднує досвід, сучасні технології та творчий підхід, щоб допомогти вашому бренду виділятися та привертати увагу.</p>
+
+            <h3>Наші послуги</h3>
+            <p>Ми пропонуємо комплексний підхід до створення реклами, охоплюючи всі етапи – від ідеї до реалізації:</p>
+            <ul>
+                <li>Виготовлення білбордів, вивісок та банерів.</li>
+                <li>Розробка унікального дизайну.</li>
+                <li>Розміщення реклами у вигідних локаціях.</li>
+                <li>Монтаж та технічне обслуговування.</li>
+                <li>Консультації з маркетингу.</li>
+            </ul>
+
+            <h3>Наші технології</h3>
+            <p>Ми використовуємо сучасні матеріали та технології, щоб забезпечити якість і довговічність:</p>
+            <ul>
+                <li><strong>Об’ємні світлові букви</strong>: з LED-підсвіткою та RGB-кольорами для яскравого ефекту.</li>
+                <li><strong>Алюмінієві композитні панелі (АКП)</strong>: легкі, міцні, з терміном служби до 50 років.</li>
+                <li><strong>Широкоформатний друк</strong>: на банерах і самоклеючих плівках для зовнішньої та інтер’єрної реклами.</li>
+                <li><strong>Кришні установки</strong>: висотою до 6 метрів для максимальної видимості.</li>
+                <li><strong>Сварочні роботи</strong>: виготовлення МАФів, арок, козирків.</li>
+                <li><strong>Лазерна порізка акрилу</strong>: для створення унікальних виробів і сувенірів.</li>
+            </ul>
+
+            <h3>Чому обирають нас?</h3>
+            <ul>
+                <li><strong>Досвід</strong>: 14 років на ринку, сотні реалізованих проєктів.</li>
+                <li><strong>Індивідуальний підхід</strong>: від унікального дизайну до маркетингових консультацій.</li>
+                <li><strong>Сучасні технології</strong>: LED-підсвітка, композити, лазерна порізка.</li>
+                <li><strong>Комплексний сервіс</strong>: від ідеї до монтажу та обслуговування.</li>
+            </ul>
+
+            <p><strong>ArtMitin</strong> – це надійний партнер для тих, хто прагне зробити свій бренд помітним і незабутнім. Довірте нам ваш проєкт, і ми зробимо його яскравим!</p>
+
+            <a href="index.html#contacts" class="cta-button">Зв’яжіться з нами</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html#services" data-section="services">Послуги</a>
+                <a href="about.html" data-section="about">Про нас</a>
+                <a href="index.html#contacts" data-section="contacts">Контакти</a>
+            </div>
+            <div class="social-links">
+                <a href="https://t.me/NeoDesignUA" target="_blank" aria-label="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.88 8.8c-.14.66-.54.82-.94.42l-2.5-1.92-1.2.74c-.42.26-.76.26-1.06-.04l.18-2.14 6.86-6.2c.3-.28.14-.66-.32-.44l-8.56 5.36-2.26-.68c-.64-.2-.66-.74.02-.98l9.06-3.5c.5-.2.94.14.9.68z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2025 ArtMitin. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Burger menu toggle
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Navigation click handling
+        document.querySelector('nav').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                window.location.href = link.href;
+            }
+        });
+
+        document.querySelector('footer').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                window.location.href = link.href;
+            }
+        });
+    </script>
+</body>
+</html>
