@@ -1,4 +1,43 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -95,11 +134,13 @@
 
         .burger {
             display: none;
-            font-size: 1.5rem;
+            font-size: 2rem; /* Increased size for prominence */
             background: none;
             border: none;
             cursor: pointer;
             color: #1A1A1A;
+            font-weight: 900; /* Bolder lines */
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow for visibility */
         }
 
         /* Hero Section */
@@ -524,12 +565,18 @@
                 top: 100%;
                 left: 0;
                 background: #FFFFFF;
-                padding: 10px 0;
+                padding: 20px 0; /* Increased padding for larger menu */
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 1.2rem; /* Larger font size for menu items */
             }
 
             .nav-links.active {
                 display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 0; /* Increased padding for larger touch area */
+                font-size: 1.2rem; /* Larger font size for readability */
             }
 
             .modal-content {
@@ -550,7 +597,7 @@
             <div class="nav-links">
                 <a href="#services" data-section="services">Послуги</a>
                 <a href="about.html">Про нас</a>
-                <a href="contacts.html">Контакти</a>
+                <a href="#contacts" data-section="contacts">Контакти</a>
             </div>
         </div>
     </nav>
@@ -702,7 +749,7 @@
                 </div>
             </div>
 
-             <div class="service-card" data-type="design" data-images='["assets/images/design-2.webp"]' data-description="Фрезерно-гравіювальні послуги для унікальних елементів.">
+            <div class="service-card" data-type="design" data-images='["assets/images/design-2.webp"]' data-description="Фрезерно-гравіювальні послуги для унікальних елементів.">
                 <img src="assets/images/design-2.webp" alt="Фрезерно-гравіювальні послуги" loading="lazy">
                 <div class="service-card-content">
                     <h3>Фрезерно-гравіювальні послуги</h3>
@@ -712,7 +759,6 @@
                     <a href="#details-14" class="details-button">Детальніше</a>
                 </div>
             </div>
-            
         </div>
     </section>
 
@@ -893,6 +939,8 @@
             if (link) {
                 e.preventDefault();
                 showSection(link.dataset.section);
+                // Close the mobile menu after selection
+                document.querySelector('.nav-links').classList.remove('active');
             }
             if (e.target.classList.contains('burger')) {
                 document.querySelector('.nav-links').classList.toggle('active');
@@ -925,5 +973,6 @@
         // Initial section
         showSection('services');
     </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935ec11bed816733',t:'MTc0NTU5MzY5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
