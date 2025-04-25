@@ -1,0 +1,462 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtMitin | Контакти</title>
+    <meta name="description" content="Зв’яжіться з ArtMitin для створення яскравих рекламних рішень. Телефонуйте, пишіть у Viber або Instagram!">
+    <meta name="keywords" content="ArtMitin, контакти, зовнішня реклама, рекламні рішення, Україна">
+    <meta name="author" content="ArtMitin">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
+    <meta name="theme-color" content="#FF6200">
+    <meta property="og:title" content="ArtMitin - Контакти">
+    <meta property="og:description" content="Готові зробити ваш бренд помітним? Зв’яжіться з ArtMitin через телефон, Viber або Instagram!">
+    <meta property="og:image" content="https://andriivolox.github.io/artmaster/hero-bg.webp">
+    <meta property="og:url" content="https://andriivolox.github.io/artmaster/contacts">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtMitin - Контакти">
+    <meta name="twitter:description" content="Готові зробити ваш бренд помітним? Зв’яжіться з ArtMitin через телефон, Viber або Instagram!">
+    <meta name="twitter:image" content="https://andriivolox.github.io/artmaster/hero-bg.webp">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1A1A;
+            background-color: #F8F8F8;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #FF6200;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1A1A1A;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6200;
+        }
+
+        .burger {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1A1A1A;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background-image: url('assets/images/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* Contacts Section */
+        .contacts {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contacts h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contacts-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .contacts-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #FF6200;
+        }
+
+        .contact-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: #1A1A1A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #FF6200;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background: #E05500;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #FF6200;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FF6200;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .contacts h2 {
+                font-size: 2rem;
+            }
+
+            .contact-card h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 1;
+            }
+
+            .burger {
+                display: block;
+                order: 2;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #FFFFFF;
+                padding: 10px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .contacts-content {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
+                ArtMitin
+            </a>
+            <button class="burger" aria-label="Відкрити меню">☰</button>
+            <div class="nav-links">
+                <a href="index.html#services" data-section="services">Послуги</a>
+                <a href="about.html" data-section="about">Про нас</a>
+                <a href="contacts.html" data-section="contacts">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Зв’яжіться з нами</h1>
+            <p>Готові втілити ваші ідеї в яскраву рекламу? Напишіть або зателефонуйте нам!</p>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <h2>Давайте створювати разом!</h2>
+        <div class="contacts-content">
+            <p>Команда ArtMitin завжди на зв’язку, щоб обговорити ваші проєкти та запропонувати найкращі рекламні рішення. Ми працюємо, щоб ваш бренд сяяв!</p>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <h3>Телефон</h3>
+                    <p>Швидкий зв’язок для ваших ідей</p>
+                    <p><a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Viber</h3>
+                    <p>Зручний чат для консультацій</p>
+                    <p><a href="viber://chat?number=+380674290579">+38 (067) 429-05-79</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Instagram</h3>
+                    <p>Слідкуйте за нашими проєктами</p>
+                    <p><a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank">@backlight949</a></p>
+                </div>
+            </div>
+            <p>Маєте запитання чи ідею? Ми готові допомогти вам зробити ваш бренд незабутнім!</p>
+            <a href="tel:+380674290579" class="cta-button">Зателефонувати зараз</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html#services" data-section="services">Послуги</a>
+                <a href="about.html" data-section="about">Про нас</a>
+                <a href="contacts.html" data-section="contacts">Контакти</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.24 2.242 1.301 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.24-3.608 1.301-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.301-.975-.975-1.24-2.242-1.301-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.301-3.608.975-.975 2.242-1.24 3.608-1.301 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.877.404-3.943 1.47C2.043 2.609 1.705 4.033 1.639 5.486c-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.453.404 2.877 1.47 3.943 1.066 1.066 2.49 1.404 3.943 1.47 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.877-.404 3.943-1.47 1.066-1.066 1.404-2.49 1.47-3.943.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.404-2.877-1.47-3.943-1.066-1.066-2.49-1.404-3.943-1.47-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2025 ArtMitin. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Burger menu toggle
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Navigation click handling
+        document.querySelector('nav').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                window.location.href = link.href;
+            }
+        });
+
+        document.querySelector('footer').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                window.location.href = link.href;
+            }
+        });
+    </script>
+</body>
+</html>
