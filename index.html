@@ -128,64 +128,86 @@
             max-width: 600px;
             text-align: center;
         }
-@keyframes neon-glow {
-    0%, 100% {
-        box-shadow:
-            0 0 15px #ff4500,
-            0 0 30px #ff4500,
-            0 0 45px #1e90ff,
-            0 0 60px #1e90ff;
-    }
-    50% {
-        box-shadow:
-            0 0 25px #ff4500,
-            0 0 45px #ff4500,
-            0 0 65px #1e90ff,
-            0 0 80px #1e90ff;
-    }
-}
 
-.cta-button {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    padding: 0;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    background: transparent;
-    border: 3px solid #ff4500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 10px #1e90ff, 0 0 15px #ff4500;
-    text-align: center;
-    line-height: 1.2;
-    animation: neon-glow 2s infinite alternate;
-}
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(1);
+                box-shadow:
+                    0 0 15px #ff4500,
+                    0 0 30px #ff4500,
+                    0 0 45px #1e90ff,
+                    0 0 60px #1e90ff;
+            }
+            50% {
+                transform: scale(1.07);
+                box-shadow:
+                    0 0 25px #ff4500,
+                    0 0 45px #ff4500,
+                    0 0 65px #1e90ff,
+                    0 0 80px #1e90ff;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow:
+                    0 0 15px #ff4500,
+                    0 0 30px #ff4500,
+                    0 0 45px #1e90ff,
+                    0 0 60px #1e90ff;
+            }
+        }
 
-.cta-button:hover {
-    border-color: #1e90ff;
-    color: #ffe;
-    transform: scale(1.05);
-    animation-duration: 1s;
-}
-
-@media (max-width: 480px) {
-    .cta-button {
-        width: 160px;
-        height: 160px;
-        font-size: 1rem;
-    }
-}
-
-
+        .cta-button {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            padding: 0;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            background: transparent;
+            border: 3px solid #ff4500;
+            text-decoration: none;
+            text-shadow: 0 0 10px #1e90ff, 0 0 15px #ff4500;
+            text-align: center;
+            line-height: 1.2;
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
 
         .cta-button:hover {
-            color: #ffffff; /* Білий колір тексту при наведенні */
+            border-color: #1e90ff;
+            color: #ffe;
+            animation-duration: 1.2s;
+        }
+
+        @media (max-width: 480px) {
+            .cta-button {
+                width: 160px;
+                height: 160px;
+                font-size: 1rem;
+            }
+        }
+
+        .cta-button:hover {
+            border-color: #1e90ff;
+            color: #ffe;
+            transform: scale(1.05);
+            animation-duration: 1s;
+        }
+
+        @media (max-width: 480px) {
+            .cta-button {
+                width: 160px;
+                height: 160px;
+                font-size: 1rem;
+            }
+        }
+
+        .cta-button:hover {
+            color: #ffffff;
             box-shadow: 0 0 20px #00ddeb, 0 0 40px #00ddeb, 0 0 60px #00ddeb;
             text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
         }
@@ -479,12 +501,18 @@
             }
 
             .nav-content {
-                flex-direction: column;
-                gap: 10px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 1;
             }
 
             .burger {
                 display: block;
+                order: 2;
             }
 
             .nav-links {
@@ -492,6 +520,12 @@
                 flex-direction: column;
                 width: 100%;
                 text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #FFFFFF;
+                padding: 10px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
             .nav-links.active {
@@ -509,7 +543,7 @@
     <nav id="navbar">
         <div class="nav-content">
             <a href="#" class="logo">
-                <img src="assets/images/favicon-32x32.webp" alt="Логотип ArtMitin">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
                 ArtMitin
             </a>
             <button class="burger" aria-label="Відкрити меню">☰</button>
@@ -526,10 +560,10 @@
             <h1>Яскрава реклама для вашого бізнесу</h1>
             <p>ArtMitin створює незабутні білборди, вивіски та LED-екрани, які привертають увагу та підвищують впізнаваність бренду.</p>
             <a href="tel:+380674290579" class="cta-button">
-    <span>📞</span>
-    <span>Замовити</span>
-    <span>зараз</span>
-</a>
+                <span>📞</span>
+                <span>Замовити</span>
+                <span>зараз</span>
+            </a>
         </div>
     </section>
 
@@ -868,5 +902,5 @@
         // Initial section
         showSection('services');
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9354567beb966760',t:'MTc0NTQ4NDQ2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
