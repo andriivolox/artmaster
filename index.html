@@ -95,13 +95,13 @@
 
         .burger {
             display: none;
-            font-size: 2rem; /* Increased size for prominence */
+            font-size: 2rem;
             background: none;
             border: none;
             cursor: pointer;
             color: #1A1A1A;
-            font-weight: 900; /* Bolder lines */
-            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Slight shadow for visibility */
+            font-weight: 900;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
         }
 
         /* Hero Section */
@@ -402,27 +402,6 @@
         .nav-arrow.right { right: 10px; }
         .nav-arrow:hover { background: rgba(0, 0, 0, 0.8); }
 
-        .thumbnails {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .thumbnails img {
-            width: 80px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: border 0.3s;
-        }
-
-        .thumbnails img.active {
-            border: 2px solid #FF6200;
-        }
-
         /* Footer */
         footer {
             background: #1A1A1A;
@@ -526,9 +505,9 @@
                 top: 100%;
                 left: 0;
                 background: #FFFFFF;
-                padding: 20px 0; /* Increased padding for larger menu */
+                padding: 20px 0;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                font-size: 1.2rem; /* Larger font size for menu items */
+                font-size: 1.2rem;
             }
 
             .nav-links.active {
@@ -536,8 +515,8 @@
             }
 
             .nav-links a {
-                padding: 15px 0; /* Increased padding for larger touch area */
-                font-size: 1.2rem; /* Larger font size for readability */
+                padding: 15px 0;
+                font-size: 1.2rem;
             }
 
             .modal-content {
@@ -746,7 +725,7 @@
             <h2>Зв’яжіться з нами</h2>
             <div style="max-width: 600px; margin: 0 auto;">
                 <p>📞 <a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
-                <p>📱 Viber: +38 (067) 429-05-79</p>
+                <p>📱 Viber: +38 (073) 949-05-79</p>
                 <p>🌐 <a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank">Instagram</a></p>
                 <p>Маєте запитання? Ми завжди готові допомогти!</p>
             </div>
@@ -761,9 +740,9 @@
                 <button class="nav-arrow left" onclick="prevImage()" aria-label="Попереднє зображення">◀</button>
                 <button class="nav-arrow right" onclick="nextImage()" aria-label="Наступне зображення">▶</button>
             </div>
-            <div class="thumbnails" id="modalThumbnails"></div>
             <p id="modalDescription"></p>
-            <p>📞 <strong>Зв'яжіться для замовлення:</strong> <a href="tel:+380674290579">+38 (067) 429-05-79</a></p>
+            <p><strong>📞 Зв'яжіться для замовлення</strong></p>
+            <a href="tel:+380674290579" class="details-button">+38 (067) 429-05-79</a>
         </div>
     </div>
 
@@ -801,12 +780,10 @@
             const modalTitle = document.getElementById('modalTitle');
             const modalDescription = document.getElementById('modalDescription');
             const imagesContainer = document.getElementById('modalImages');
-            const thumbnailsContainer = document.getElementById('modalThumbnails');
 
             modalTitle.innerText = title;
             modalDescription.innerText = description;
             imagesContainer.innerHTML = '<button class="nav-arrow left" onclick="prevImage()" aria-label="Попереднє зображення">◀</button><button class="nav-arrow right" onclick="nextImage()" aria-label="Наступне зображення">▶</button>';
-            thumbnailsContainer.innerHTML = '';
 
             images.forEach((src, index) => {
                 if (src) {
@@ -819,17 +796,6 @@
                         img.src = 'assets/images/fallback.png';
                     };
                     imagesContainer.appendChild(img);
-
-                    const thumb = document.createElement('img');
-                    thumb.src = src;
-                    thumb.alt = `Мініатюра реклами ${title} - зображення ${index + 1}`;
-                    thumb.className = index === 0 ? 'active' : '';
-                    thumb.loading = 'lazy';
-                    thumb.onclick = () => switchImage(index);
-                    thumb.onerror = () => {
-                        thumb.src = 'assets/images/fallback.png';
-                    };
-                    thumbnailsContainer.appendChild(thumb);
                 }
             });
 
@@ -847,18 +813,14 @@
             const modal = document.getElementById('detailsModal');
             modal.style.display = 'none';
             document.getElementById('modalImages').innerHTML = '';
-            document.getElementById('modalThumbnails').innerHTML = '';
             document.getElementById('modalTitle').innerText = '';
             document.getElementById('modalDescription').innerText = '';
         }
 
         function switchImage(index) {
             const images = document.querySelectorAll('#modalImages img');
-            const thumbs = document.querySelectorAll('#modalThumbnails img');
             images.forEach(img => img.classList.remove('active'));
-            thumbs.forEach(thumb => thumb.classList.remove('active'));
             images[index].classList.add('active');
-            thumbs[index].classList.add('active');
             currentImageIndex = index;
             updateArrows(images.length);
         }
@@ -902,7 +864,6 @@
             if (link) {
                 e.preventDefault();
                 showSection(link.dataset.section);
-                // Close the mobile menu after selection
                 document.querySelector('.nav-links').classList.remove('active');
             }
             if (e.target.classList.contains('burger')) {
@@ -932,10 +893,6 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
-
-        // Initial section
-       // showSection('services');
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'935ec11bed816733',t:'MTc0NTU5MzY5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
