@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtMitin | Відео-галерея наших робіт</title>
+    <meta name="description" content="Перегляньте відео-галерею робіт ArtMitin: неонові вивіски, LED-екрани, білборди, сітілайти та інші рекламні рішення для вашого бізнесу.">
+    <meta name="keywords" content="відео-галерея реклами, неонові вивіски, LED-екрани, білборди, сітілайти, зовнішня реклама, ArtMitin">
+    <meta name="author" content="ArtMitin">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.webp" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
+    <meta name="theme-color" content="#FF6200">
+    <meta property="og:title" content="ArtMitin - Відео-галерея зовнішньої реклами">
+    <meta property="og:description" content="Ознайомтесь з нашими відео-роботами: білборди, неонові вивіски, LED-екрани та інші рекламні рішення від ArtMitin.">
+    <meta property="og:image" content="https://andriivolox.github.io/artmaster/assets/images/hero-bg.webp">
+    <meta property="og:url" content="https://andriivolox.github.io/artmaster/video-gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtMitin - Відео-галерея робіт">
+    <meta name="twitter:description" content="Перегляньте наші рекламні відео-проєкти: вивіски, LED-екрани, білборди та більше від ArtMitin.">
+    <meta name="twitter:image" content="https://andriivolox.github.io/artmaster/assets/images/hero-bg.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F8F8;
+            color: #1A1A1A;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #FF6200;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1A1A1A;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6200;
+        }
+
+        .burger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1A1A1A;
+            font-weight: 900;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero {
+            height: 50vh;
+            background: url('assets/images/hero-bg.webp') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-video {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            background-color: #000;
+        }
+
+        .gallery-video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #1A1A1A;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: #FF6200;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .gallery-video {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                order: 1;
+            }
+
+            .burger {
+                display: block;
+                order: 2;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: #FFFFFF;
+                padding: 20px 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 1.2rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 0;
+                font-size: 1.2rem;
+            }
+
+            .gallery-video {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
+                ArtMitin
+            </a>
+            <button class="burger" aria-label="Відкрити меню">☰</button>
+            <div class="nav-links">
+                <a href="index.html#services">Послуги</a>
+                <a href="about.html">Про нас</a>
+                <a href="gallery.html">Фото</a>
+                <a href="video-gallery.html">Відео</a>
+                <a href="contacts.html">Контакти</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Відео-галерея наших робіт</h1>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-grid">
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/1S6_EHeVMYw" title="Наш проект-1. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/pkTXbrA7RVU" title="Наш проект-8. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/n2zARAuqems" title="Наш проект-9. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/RFxT_6DvTdQ" title="Наш проект-3. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/xvvs4JN8vH8" title="Наш проект-4. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/2AOKr7yAe-o" title="Наш проект-5. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/X0sUTzjJ5PU" title="Наш проект-6. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/HZ3rfpuRMdc" title="Наш проект-7. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+            <iframe class="gallery-video" src="https://www.youtube.com/embed/XPiq5m78XxI" title="Наш проект-10. Artmitin.site - Яскрава зовнішня реклама для вашого бізнесу" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#services">Послуги</a>
+            <a href="about.html">Про нас</a>
+            <a href="gallery.html">Фото</a>
+            <a href="video-gallery.html">Відео</a>
+            <a href="contacts.html">Контакти</a>
+        </div>
+        <p>© 2025 ArtMitin. Всі права захищено.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Navigation and burger menu handling
+        document.querySelector('nav').addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-section]');
+            if (link) {
+                e.preventDefault();
+                window.location.href = link.href;
+            }
+            if (e.target.classList.contains('burger')) {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
