@@ -80,21 +80,44 @@
     }
     @media (max-width: 768px) {
       .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        padding: 10px;
-        border-radius: 8px;
+        gap: 10px;
       }
-      .nav-links.show {
-        display: flex;
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .nav-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        order: 1;
       }
       .burger {
         display: block;
+        order: 2;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #FFFFFF;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 15px 0;
+        font-size: 1.2rem;
       }
     }
 
@@ -132,16 +155,17 @@
 <body>
   <nav id="navbar">
     <div class="nav-content">
-      <a href="index.html" class="logo" aria-label="На головну">
+      <a href="index.html" class="logo">
         <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
         ArtMitin
       </a>
       <button class="burger" aria-label="Відкрити меню">☰</button>
       <div class="nav-links">
-        <a href="index.html#services" aria-label="Наші послуги">Послуги</a>
-        <a href="about.html" aria-label="Про компанію">Про нас</a>
-        <a href="gallery.html" aria-label="Фотогалерея">Фото</a>
-        <a href="contacts.html" aria-label="Контакти">Контакти</a>
+        <a href="index.html#services">Послуги</a>
+        <a href="about.html">Про нас</a>
+        <a href="gallery.html">Фото</a>
+        <a href="video-gallery.html">Відео</a>
+        <a href="contacts.html">Контакти</a>
       </div>
     </div>
   </nav>
@@ -156,43 +180,43 @@
       <p>Відкрийте для себе наші реалізовані проекти зовнішньої реклами. ArtMitin пропонує високоякісні рекламні рішення по всій Україні.</p>
     </div>
     <div class="gallery-grid">
-    <div class="video-placeholder" data-video-id="1S6_EHeVMYw">
-      <img src="https://img.youtube.com/vi/1S6_EHeVMYw/hqdefault.jpg" alt="Білборд проект 1 - ArtMitin">
-      <div class="play-button">▶</div>
+      <div class="video-placeholder" data-video-id="1S6_EHeVMYw">
+        <img src="https://img.youtube.com/vi/1S6_EHeVMYw/hqdefault.jpg" alt="Білборд проект 1 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="pkTXbrA7RVU">
+        <img src="https://img.youtube.com/vi/pkTXbrA7RVU/hqdefault.jpg" alt="LED екран проект 8 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="n2zARAuqems">
+        <img src="https://img.youtube.com/vi/n2zARAuqems/hqdefault.jpg" alt="Неонова вивіска проект 9 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="RFxT_6DvTdQ">
+        <img src="https://img.youtube.com/vi/RFxT_6DvTdQ/hqdefault.jpg" alt="Білборд проект 3 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="xvvs4JN8vH8">
+        <img src="https://img.youtube.com/vi/xvvs4JN8vH8/hqdefault.jpg" alt="LED екран проект 4 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="2AOKr7yAe-o">
+        <img src="https://img.youtube.com/vi/2AOKr7yAe-o/hqdefault.jpg" alt="Неонова вивіска проект 5 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="X0sUTzjJ5PU">
+        <img src="https://img.youtube.com/vi/X0sUTzjJ5PU/hqdefault.jpg" alt="Білборд проект 6 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="HZ3rfpuRMdc">
+        <img src="https://img.youtube.com/vi/HZ3rfpuRMdc/hqdefault.jpg" alt="Неонова вивіска проект 7 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
+      <div class="video-placeholder" data-video-id="XPiq5m78XxI">
+        <img src="https://img.youtube.com/vi/XPiq5m78XxI/hqdefault.jpg" alt="LED екран проект 10 - ArtMitin">
+        <div class="play-button">▶</div>
+      </div>
     </div>
-    <div class="video-placeholder" data-video-id="pkTXbrA7RVU">
-      <img src="https://img.youtube.com/vi/pkTXbrA7RVU/hqdefault.jpg" alt="LED екран проект 8 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="n2zARAuqems">
-      <img src="https://img.youtube.com/vi/n2zARAuqems/hqdefault.jpg" alt="Неонова вивіска проект 9 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="RFxT_6DvTdQ">
-      <img src="https://img.youtube.com/vi/RFxT_6DvTdQ/hqdefault.jpg" alt="Білборд проект 3 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="xvvs4JN8vH8">
-      <img src="https://img.youtube.com/vi/xvvs4JN8vH8/hqdefault.jpg" alt="LED екран проект 4 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="2AOKr7yAe-o">
-      <img src="https://img.youtube.com/vi/2AOKr7yAe-o/hqdefault.jpg" alt="Неонова вивіска проект 5 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="X0sUTzjJ5PU">
-      <img src="https://img.youtube.com/vi/X0sUTzjJ5PU/hqdefault.jpg" alt="Білборд проект 6 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="HZ3rfpuRMdc">
-      <img src="https://img.youtube.com/vi/HZ3rfpuRMdc/hqdefault.jpg" alt="Неонова вивіска проект 7 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-    <div class="video-placeholder" data-video-id="XPiq5m78XxI">
-      <img src="https://img.youtube.com/vi/XPiq5m78XxI/hqdefault.jpg" alt="LED екран проект 10 - ArtMitin">
-      <div class="play-button">▶</div>
-    </div>
-  </div>
   </section>
 
   <footer>
@@ -200,9 +224,10 @@
       <a href="index.html#services">Послуги</a>
       <a href="about.html">Про нас</a>
       <a href="gallery.html">Фото</a>
+      <a href="video-gallery.html">Відео</a>
       <a href="contacts.html">Контакти</a>
     </div>
-    <p>© 2025 ArtMitin. Всі права захищені.</p>
+    <p>© 2025 ArtMitin. Всі права захищено.</p>
   </footer>
 
   <script>
@@ -222,12 +247,24 @@
       });
     });
 
-    // Мобільне меню
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Navigation and burger menu handling
+    document.querySelector('nav').addEventListener('click', (e) => {
+      const link = e.target.closest('a[data-section]');
+      if (link) {
+        e.preventDefault();
+        window.location.href = link.href;
+      }
+      if (e.target.classList.contains('burger')) {
+        document.querySelector('.nav-links').classList.toggle('active');
+      }
     });
   </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'937d2d12490f4517',t:'MTc0NTkxMjY4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
