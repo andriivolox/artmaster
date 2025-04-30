@@ -8,24 +8,23 @@
     <meta name="keywords" content="ArtMitin, зовнішня реклама, про нас, рекламні рішення, Україна">
     <meta name="author" content="ArtMitin">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="ArtMitin" />
     <link rel="manifest" href="assets/images/site.webmanifest" />
     <meta name="theme-color" content="#FF6200">
     <meta property="og:title" content="ArtMitin - Про нас">
     <meta property="og:description" content="ArtMitin – ваш партнер у створенні яскравих рекламних рішень. Дізнайтесь про наш досвід та послуги.">
-    <meta property="og:image" content="https://artmitin.site/hero-bg.webp">
+    <meta property="og:image" content="https://artmitin.site/assets/images/hero-bg.webp">
     <meta property="og:url" content="https://artmitin.site/about.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ArtMitin - Про нас">
     <meta name="twitter:description" content="ArtMitin – ваш партнер у створенні яскравих рекламних рішень. Дізнайтесь про наш досвід та послуги.">
-    <meta name="twitter:image" content="https://artmitin.site/hero-bg.webp">
+    <meta name="twitter:image" content="https://artmitin.site/assets/images/hero-bg.webp">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -109,7 +108,7 @@
 
         /* Hero Section */
         .hero {
-            height: 60vh;
+            height: 50vh;
             background-image: url('assets/images/hero-bg.webp');
             background-size: cover;
             background-position: center;
@@ -140,7 +139,7 @@
         }
 
         .about h2 {
-            font-family:emi 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 40px;
@@ -200,6 +199,84 @@
             transform: scale(1.05);
         }
 
+        /* Reviews Section */
+        .reviews {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .review-item {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-item p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .review-item cite {
+            font-style: normal;
+            font-weight: 600;
+            color: #FF6200;
+        }
+
+        /* Stats Section */
+        .stats {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: #FF6200;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: #666;
+            font-size: 1rem;
+        }
+
         /* Footer */
         footer {
             background: #1A1A1A;
@@ -235,6 +312,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
+            margin-bottom: 20px;
         }
 
         .social-links a {
@@ -257,12 +335,16 @@
                 font-size: 1rem;
             }
 
-            .about h2 {
+            .about h2, .reviews h2, .stats h2 {
                 font-size: 2rem;
             }
 
             .about-content h3 {
                 font-size: 1.5rem;
+            }
+
+            .stat-item h3 {
+                font-size: 1.8rem;
             }
         }
 
@@ -303,7 +385,7 @@
                 display: flex;
             }
 
-            .about-content {
+            .about-content, .review-item p, .stat-item p {
                 font-size: 0.9rem;
             }
         }
@@ -313,11 +395,11 @@
     <nav id="navbar">
         <div class="nav-content">
             <a href="index.html" class="logo">
-                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin" loading="lazy">
                 ArtMitin
             </a>
-            <button class="burger" aria-label="Відкрити меню">☰</button>
-            <div class="nav-links">
+            <button class="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html#services">Послуги</a>
                 <a href="gallery.html">Фото</a>
                 <a href="video-gallery.html">Відео</a>
@@ -373,6 +455,42 @@
         </div>
     </section>
 
+    <section class="stats">
+        <h2>Наші досягнення</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Реалізованих проєктів</p>
+            </div>
+            <div class="stat-item">
+                <h3>14</h3>
+                <p>Років досвіду</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Задоволених клієнтів</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Відгуки клієнтів</h2>
+        <div class="review-grid">
+            <div class="review-item">
+                <p>"ArtMitin створив для нас вражаючий білборд, який привернув увагу сотень клієнтів. Професійний підхід і швидка реалізація!"</p>
+                <cite>Олена К., маркетолог</cite>
+            </div>
+            <div class="review-item">
+                <p>"Неонова вивіска для нашого кафе стала справжньою родзинкою. Дякуємо за креативність і якість!"</p>
+                <cite>Ігор П., власник кафе</cite>
+            </div>
+            <div class="review-item">
+                <p>"LED-екран від ArtMitin працює бездоганно. Команда врахувала всі наші побажання!"</p>
+                <cite>Марія С., менеджер ТЦ</cite>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -382,15 +500,32 @@
                 <a href="contacts.html">Контакти</a>
             </div>
             <div class="social-links">
-                <a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank" aria-label="instagram">
+                <a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank" aria-label="Instagram">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.88 8.8c-.14.66-.54.82-.94.42l-2.5-1.92-1.2.74c-.42.26-.76.26-1.06-.04l.18-2.14 6.86-6.2c.3-.28.14-.66-.32-.44l-8.56 5.36-2.26-.68c-.64-.2-.66-.74.02-.98l9.06-3.5c.5-.2.94.14.9.68z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.24 2.242 1.301 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.24-3.608 1.301-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.301-.975-.975-1.24-2.242-1.301-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.301-3.608.975-.975 2.242-1.24 3.608-1.301 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.877.404-3.943 1.47C2.043 2.609 1.705 4.033 1.639 5.486c-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.453.404 2.877 1.47 3.943 1.066 1.066 2.49 1.404 3.943 1.47 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.877-.404 3.943-1.47 1.066-1.066 1.404-2.49 1.47-3.943.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.404-2.877-1.47-3.943-1.066-1.066-2.49-1.404-3.943-1.47-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
                     </svg>
                 </a>
             </div>
             <p>© 2025 ArtMitin. Всі права захищено.</p>
         </div>
     </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArtMitin",
+      "description": "Українська компанія, що спеціалізується на зовнішній рекламі: білборди, LED-екрани, неонові вивіски.",
+      "url": "https://artmitin.site",
+      "logo": "https://artmitin.site/assets/images/favicon-48x48.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+380674290579",
+        "contactType": "Customer Service"
+      },
+      "sameAs": ["https://www.instagram.com/backlight949"]
+    }
+    </script>
 
     <script>
         // Navbar scroll effect
@@ -399,27 +534,22 @@
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Burger menu toggle
-        document.querySelector('.burger').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+        // Burger menu toggle with aria-expanded
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            const isExpanded = navLinks.classList.toggle('active');
+            burger.setAttribute('aria-expanded', isExpanded);
         });
 
-        // Navigation click handling
-        document.querySelector('nav').addEventListener('click', (e) => {
-            const link = e.target.closest('a[data-section]');
-            if (link) {
-                e.preventDefault();
-                window.location.href = link.href;
-            }
-        });
-
-        document.querySelector('footer').addEventListener('click', (e) => {
-            const link = e.target.closest('a[data-section]');
-            if (link) {
-                e.preventDefault();
-                window.location.href = link.href;
-            }
+        // Auto-close burger menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.setAttribute('aria-expanded', 'false');
+            });
         });
     </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9385d1d0a849bf98',t:'MTc0NjAwMzMyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
