@@ -586,15 +586,19 @@
     const itemsPerPage = 6;
     let currentPage = 1;
 
-    function updatePagination() {
-      const visibleItems = Array.from(videoItems).filter(item => item.style.display !== 'none');
-      const totalPages = Math.ceil(visibleItems.length / itemsPerPage);
-      visibleItems.forEach((item, index) => {
-        item.style.display = index < currentPage * itemsPerPage && index >= (currentPage - 1) * itemsPerPage ? 'block' : 'none';
-      });
-      const loadMoreButton = document.getElementById('load-more');
-      loadMoreButton.style.display = currentPage < totalPages ? 'block' : 'none';
-    }
+   function updatePagination() {
+  const visibleItems = Array.from(videoItems).filter(item => item.style.display !== 'none');
+  const totalPages = Math.ceil(visibleItems.length / itemsPerPage);
+  
+  // Відображаємо всі елементи до поточної сторінки
+  visibleItems.forEach((item, index) => {
+    item.style.display = index < currentPage * itemsPerPage ? 'block' : 'none';
+  });
+
+  // Керуємо видимістю кнопки "Завантажити ще"
+  const loadMoreButton = document.getElementById('load-more');
+  loadMoreButton.style.display = currentPage < totalPages ? 'block' : 'none';
+}
 
     document.getElementById('load-more').addEventListener('click', () => {
       currentPage++;
