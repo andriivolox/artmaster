@@ -2,34 +2,35 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtMitin | Галерея наших робіт</title>
-    <meta name="description" content="Перегляньте галерею робіт ArtMitin: неонові вивіски, LED-екрани, білборди, сітілайти та інші рекламні рішення для вашого бізнесу.">
-    <meta name="keywords" content="галерея реклами, неонові вивіски, LED-екрани, білборди, сітілайти, зовнішня реклама, ArtMitin">
-    <meta name="author" content="ArtMitin">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="ArtMitin" />
-    <link rel="manifest" href="assets/images/site.webmanifest" />    
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180x180.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ArtMitin | Фотогалерея зовнішньої реклами - Білборди, LED-екрани, Неонові вивіски</title>
     <meta name="theme-color" content="#FF6200">
-    <meta property="og:title" content="ArtMitin - Галерея зовнішньої реклами">
-    <meta property="og:description" content="Ознайомтесь з нашими роботами: білборди, неонові вивіски, LED-екрани та інші рекламні рішення від ArtMitin.">
-    <meta property="og:image" content="https://andriivolox.github.io/artmaster/assets/images/hero-bg.webp">
-    <meta property="og:url" content="https://andriivolox.github.io/artmaster/gallery.html">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Перегляньте фотогалерею ArtMitin: білборди, LED-екрани, неонові вивіски, сітілайти та інші рекламні рішення для вашого бізнесу в Україні.">
+    <meta name="keywords" content="фотогалерея, зовнішня реклама, білборди, LED-екрани, неонові вивіски, сітілайти, рекламні проєкти, Україна, ArtMitin">
+    <meta name="author" content="ArtMitin">
+    <meta property="og:title" content="ArtMitin | Фотогалерея зовнішньої реклами">
+    <meta property="og:description" content="Ознайомтеся з портфоліо зовнішньої реклами: білборди, неонові вивіски, LED-екрани від ArtMitin.">
+    <meta property="og:image" content="https://artmitin.site/assets/images/hero-bg.webp">
+    <meta property="og:url" content="https://artmitin.site/gallery.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ArtMitin - Галерея робіт">
-    <meta name="twitter:description" content="Перегляньте наші рекламні проєкти: вивіски, LED-екрани, білборди та більше від ArtMitin.">
-    <meta name="twitter:image" content="https://andriivolox.github.io/artmaster/assets/images/hero-bg.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <meta name="twitter:title" content="ArtMitin | Фотогалерея зовнішньої реклами">
+    <meta name="twitter:description" content="Перегляньте наші рекламні проєкти: білборди, LED-екрани, неонові вивіски та більше від ArtMitin.">
+    <meta name="twitter:image" content="https://artmitin.site/assets/images/hero-bg.webp">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://artmitin.site/gallery.html">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="ArtMitin">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <style>
         * {
             margin: 0;
@@ -45,7 +46,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -121,44 +121,174 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        .hero-content h1 {
+            font-size: 2.5rem;
+            padding: 0 1rem;
             font-family: 'Poppins', sans-serif;
+            line-height: 1.3;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 10px auto 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #E05500;
+            transform: scale(1.05);
         }
 
         .gallery {
             max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+
+        .gallery-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-intro h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .gallery-intro p {
+            color: #666;
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-button {
+            background: #FFFFFF;
+            border: 1px solid #FF6200;
+            color: #FF6200;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .filter-button.active, .filter-button:hover {
+            background: #FF6200;
+            color: #FFFFFF;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .gallery-photo, .gallery-video {
-            width: 100%;
+        .image-item {
+            position: relative;
             border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            background: #000;
+            aspect-ratio: 16 / 9;
+            cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .gallery-photo {
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-video {
-            height: 200px;
-            border: none;
-            background-color: #000;
-        }
-
-        .gallery-photo:hover, .gallery-video:hover {
+        .image-item:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FFFFFF;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FF6200;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .load-more {
+            display: block;
+            margin: 20px auto;
+            background: #FF6200;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .load-more:hover {
+            background: #E05500;
+            transform: scale(1.05);
         }
 
         footer {
@@ -168,30 +298,54 @@
             padding: 30px 20px;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
         .footer-links a {
             color: #FFFFFF;
-            margin: 0 10px;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s;
         }
 
         .footer-links a:hover {
             color: #FF6200;
         }
 
-        /* Responsive Design */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FF6200;
+        }
+
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 10px;
-            }
-
-            .nav-links a {
-                font-size: 0.9rem;
-            }
-
-            .gallery-video {
-                height: 180px;
-            }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 0.9rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content p { font-size: 1rem; }
+            .gallery-intro h2 { font-size: 1.8rem; }
+            .filters { flex-wrap: wrap; }
+            .image-description { font-size: 0.8rem; }
         }
 
         @media (max-width: 480px) {
@@ -200,16 +354,8 @@
                 justify-content: space-between;
                 align-items: center;
             }
-
-            .logo {
-                order: 1;
-            }
-
-            .burger {
-                display: block;
-                order: 2;
-            }
-
+            .logo { order: 1; }
+            .burger { display: block; order: 2; }
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -223,19 +369,10 @@
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 font-size: 1.2rem;
             }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 15px 0;
-                font-size: 1.2rem;
-            }
-
-            .gallery-video {
-                height: 160px;
-            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px 0; font-size: 1.2rem; }
+            .hero-content h1 { font-size: 1.8rem; }
+            .image-description { font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -243,7 +380,7 @@
     <nav id="navbar">
         <div class="nav-content">
             <a href="index.html" class="logo">
-                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
+                <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin" loading="lazy">
                 ArtMitin
             </a>
             <button class="burger" aria-label="Відкрити меню">☰</button>
@@ -257,108 +394,1147 @@
     </nav>
 
     <section class="hero">
-        <h1>Галерея наших робіт</h1>
+        <div class="hero-content">
+            <h1>Фотогалерея зовнішньої реклами</h1>
+            <p>Перегляньте наші яскраві проєкти: білборди, LED-екрани, неонові вивіски, сітілайти та більше.</p>
+            <a href="tel:+380674290579" class="cta-button">Замовити рекламу</a>
+        </div>
     </section>
 
     <section class="gallery">
-        <div class="gallery-grid">
-            
-            <img src="assets/images/baner2025 (1).jpg" alt="Банер 2025 - 1" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (2).jpg" alt="Банер 2025 - 2" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (3).jpg" alt="Банер 2025 - 3" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (4).jpg" alt="Банер 2025 - 4" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (5).jpg" alt="Банер 2025 - 5" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (6).jpg" alt="Банер 2025 - 6" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (7).jpg" alt="Банер 2025 - 7" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (8).jpg" alt="Банер 2025 - 8" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (9).jpg" alt="Банер 2025 - 9" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (10).jpg" alt="Банер 2025 - 10" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (11).jpg" alt="Банер 2025 - 11" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (12).jpg" alt="Банер 2025 - 12" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (13).jpg" alt="Банер 2025 - 13" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (14).jpg" alt="Банер 2025 - 14" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (15).jpg" alt="Банер 2025 - 15" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (16).jpg" alt="Банер 2025 - 16" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (17).jpg" alt="Банер 2025 - 17" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (18).jpg" alt="Банер 2025 - 18" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (19).jpg" alt="Банер 2025 - 19" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (20).jpg" alt="Банер 2025 - 20" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (21).jpg" alt="Банер 2025 - 21" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (22).jpg" alt="Банер 2025 - 22" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (23).jpg" alt="Банер 2025 - 23" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (24).jpg" alt="Банер 2025 - 24" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (25).jpg" alt="Банер 2025 - 25" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (26).jpg" alt="Банер 2025 - 26" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (27).jpg" alt="Банер 2025 - 27" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (28).jpg" alt="Банер 2025 - 28" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (29).jpg" alt="Банер 2025 - 29" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (30).jpg" alt="Банер 2025 - 30" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (31).jpg" alt="Банер 2025 - 31" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (32).jpg" alt="Банер 2025 - 32" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (33).jpg" alt="Банер 2025 - 33" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (34).jpg" alt="Банер 2025 - 34" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (35).jpg" alt="Банер 2025 - 35" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (36).jpg" alt="Банер 2025 - 36" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (37).jpg" alt="Банер 2025 - 37" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (38).jpg" alt="Банер 2025 - 38" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (39).jpg" alt="Банер 2025 - 39" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (40).jpg" alt="Банер 2025 - 40" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (41).jpg" alt="Банер 2025 - 41" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (42).jpg" alt="Банер 2025 - 42" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (43).jpg" alt="Банер 2025 - 43" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (44).jpg" alt="Банер 2025 - 44" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (45).jpg" alt="Банер 2025 - 45" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (46).jpg" alt="Банер 2025 - 46" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (47).jpg" alt="Банер 2025 - 47" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (48).jpg" alt="Банер 2025 - 48" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (49).jpg" alt="Банер 2025 - 49" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (50).jpg" alt="Банер 2025 - 50" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (51).jpg" alt="Банер 2025 - 51" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (52).jpg" alt="Банер 2025 - 52" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (53).jpg" alt="Банер 2025 - 53" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (54).jpg" alt="Банер 2025 - 54" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (55).jpg" alt="Банер 2025 - 55" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (56).jpg" alt="Банер 2025 - 56" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (57).jpg" alt="Банер 2025 - 57" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (58).jpg" alt="Банер 2025 - 58" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (59).jpg" alt="Банер 2025 - 59" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (60).jpg" alt="Банер 2025 - 60" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (61).jpg" alt="Банер 2025 - 61" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (62).jpg" alt="Банер 2025 - 62" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (63).jpg" alt="Банер 2025 - 63" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (64).jpg" alt="Банер 2025 - 64" loading="lazy" class="gallery-photo">
-<img src="assets/images/baner2025 (65).jpg" alt="Банер 2025 - 65" loading="lazy" class="gallery-photo">
-            <img src="assets/images/baner-1.jpg" alt="Банер Смак 1" loading="lazy" class="gallery-photo">
-            <img src="assets/images/baner-2.jpg" alt="Банер Смак 2" loading="lazy" class="gallery-photo">
-            <img src="assets/images/baner-3.jpg" alt="Банер Смак 3" loading="lazy" class="gallery-photo">
-            <img src="assets/images/baner-4.jpg" alt="Банер Смак 4" loading="lazy" class="gallery-photo">
-            <img src="assets/images/baner-5.jpg" alt="Банер Стоматологія" loading="lazy" class="gallery-photo">
-            <img src="assets/images/printing-1.webp" alt="Вакуумна формовка" loading="lazy" class="gallery-photo">
-            <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски" loading="lazy" class="gallery-photo">
-            <img src="assets/images/neon-sign-3.webp" alt="Світлові вивіски" loading="lazy" class="gallery-photo">
-            <img src="assets/images/led-screen-1.webp" alt="LED монохромне табло" loading="lazy" class="gallery-photo">
-            <img src="assets/images/led-screen-2.webp" alt="Повноколірний вуличний екран" loading="lazy" class="gallery-photo">
-            <img src="assets/images/city-light-1.webp" alt="Сітілайти" loading="lazy" class="gallery-photo">
-            <img src="assets/images/volume-sign-1.webp" alt="Об’ємні світлові вивіски" loading="lazy" class="gallery-photo">
-            <img src="assets/images/banner-1.webp" alt="Широкоформатний друк" loading="lazy" class="gallery-photo">
-            <img src="assets/images/banner-2.webp" alt="Оренда рекламних носіїв" loading="lazy" class="gallery-photo">
-            <img src="assets/images/furniture-1.webp" alt="Міські меблі" loading="lazy" class="gallery-photo">
-            <img src="assets/images/printing-3.webp" alt="Світлова лаконічна реклама" loading="lazy" class="gallery-photo">
-            <img src="assets/images/design-1.webp" alt="Оформлення АЗС" loading="lazy" class="gallery-photo">
-            <img src="assets/images/design-2.webp" alt="Фрезерно-гравіювальні послуги" loading="lazy" class="gallery-photo">
+        <div class="gallery-intro">
+            <h2>Наші роботи: Білборди, LED-екрани, Неонові вивіски</h2>
+            <p>Ознайомтесь із фотогалереєю наших проєктів зовнішньої реклами. ArtMitin створює ефективні рекламні рішення по всій Україні.</p>
         </div>
+        <div class="filters">
+            <button class="filter-button active" data-filter="all" aria-label="Показати всі фото">Всі</button>
+            <button class="filter-button" data-filter="billboard" aria-label="Показати білборди">Білборди</button>
+            <button class="filter-button" data-filter="led" aria-label="Показати LED-екрани">LED-екрани</button>
+            <button class="filter-button" data-filter="neon" aria-label="Показати неонові вивіски">Неонові вивіски</button>
+            <button class="filter-button" data-filter="citylight" aria-label="Показати сітілайти">Сітілайти</button>
+            <button class="filter-button" data-filter="other" aria-label="Показати інші проєкти">Інше</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+            
+            <!-- Банери, вивіски, Білборди, LED екрани 2025 -->
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (1).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 1" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 1</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (2).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 2" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 2</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (3).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 3" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 3</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (4).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 4" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 4</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (5).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 5" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 5</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (6).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 6" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 6</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (7).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 7" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 7</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (8).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 8" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 8</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (9).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 9" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 9</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (10).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 10" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 10</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (11).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 11" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 11</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (12).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 12" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 12</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (13).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 13" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 13</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (14).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 14" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 14</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (15).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 15" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 15</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (16).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 16" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 16</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (17).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 17" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 17</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (18).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 18" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 18</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (19).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 19" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 19</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (20).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 20" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 20</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (21).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 21" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 21</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (22).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 22" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 22</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (23).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 23" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 23</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (24).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 24" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 24</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (25).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 25" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 25</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (26).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 26" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 26</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (27).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 27" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 27</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (28).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 28" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 28</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (29).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 29" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 29</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (30).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 30" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 30</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (31).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 31" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 31</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (32).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 32" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 32</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (33).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 33" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 33</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (34).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 34" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 34</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (35).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 35" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 35</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (36).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 36" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 36</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (37).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 37" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 37</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (38).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 38" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 38</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (39).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 39" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 39</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (40).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 40" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 40</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (41).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 41" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 41</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (42).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 42" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 42</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (43).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 43" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 43</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (44).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 44" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 44</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (45).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 45" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 45</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (46).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 46" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 46</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (47).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 47" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 47</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (48).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 48" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 48</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (49).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 49" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 49</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (50).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 50" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 50</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (51).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 51" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 51</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (52).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 52" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 52</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (53).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 53" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 53</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (54).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 54" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 54</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (55).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 55" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 55</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (56).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 56" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 56</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (57).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 57" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 57</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (58).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 58" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 58</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (59).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 59" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 59</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (60).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 60" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 60</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (61).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 61" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 61</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (62).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 62" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 62</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (63).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 63" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 63</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (64).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 64" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 64</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner2025 (65).jpg" alt="Банери, вивіски, Білборди, LED екрани 2025 - 65" loading="lazy">
+                    <div class="image-description">Банери, вивіски, Білборди, LED екрани 2025 - 65</div>
+                </div>
+            </div>
+            <!-- Банери Смак (Білборди) -->
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner-1.jpg" alt="Банер Смак 1" loading="lazy">
+                    <div class="image-description">Банер Смак 1</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner-2.jpg" alt="Банер Смак 2" loading="lazy">
+                    <div class="image-description">Банер Смак 2</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner-3.jpg" alt="Банер Смак 3" loading="lazy">
+                    <div class="image-description">Банер Смак 3</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner-4.jpg" alt="Банер Смак 4" loading="lazy">
+                    <div class="image-description">Банер Смак 4</div>
+                </div>
+            </div>
+            <!-- Інші проєкти -->
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/baner-5.jpg" alt="Банер Стоматологія" loading="lazy">
+                    <div class="image-description">Банер Стоматологія</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/printing-1.webp" alt="Вакуумна формовка" loading="lazy">
+                    <div class="image-description">Вакуумна формовка</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="neon">
+                <div class="image-placeholder">
+                    <img src="assets/images/neon-sign-1.png" alt="Комбіновані вивіски" loading="lazy">
+                    <div class="image-description">Комбіновані вивіски</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="neon">
+                <div class="image-placeholder">
+                    <img src="assets/images/neon-sign-3.webp" alt="Світлові вивіски" loading="lazy">
+                    <div class="image-description">Світлові вивіски</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="led">
+                <div class="image-placeholder">
+                    <img src="assets/images/led-screen-1.webp" alt="LED монохромне табло" loading="lazy">
+                    <div class="image-description">LED монохромне табло</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="led">
+                <div class="image-placeholder">
+                    <img src="assets/images/led-screen-2.webp" alt="Повноколірний вуличний екран" loading="lazy">
+                    <div class="image-description">Повноколірний вуличний екран</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="citylight">
+                <div class="image-placeholder">
+                    <img src="assets/images/city-light-1.webp" alt="Сітілайти" loading="lazy">
+                    <div class="image-description">Сітілайти</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="neon">
+                <div class="image-placeholder">
+                    <img src="assets/images/volume-sign-1.webp" alt="Об’ємні світлові вивіски" loading="lazy">
+                    <div class="image-description">Об’ємні світлові вивіски</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/banner-1.webp" alt="Широкоформатний друк" loading="lazy">
+                    <div class="image-description">Широкоформатний друк</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="billboard">
+                <div class="image-placeholder">
+                    <img src="assets/images/banner-2.webp" alt="Оренда рекламних носіїв" loading="lazy">
+                    <div class="image-description">Оренда рекламних носіїв</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/furniture-1.webp" alt="Міські меблі" loading="lazy">
+                    <div class="image-description">Міські меблі</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/printing-3.webp" alt="Світлова лаконічна реклама" loading="lazy">
+                    <div class="image-description">Світлова лаконічна реклама</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/design-1.webp" alt="Оформлення АЗС" loading="lazy">
+                    <div class="image-description">Оформлення АЗС</div>
+                </div>
+            </div>
+            <div class="image-item" data-category="other">
+                <div class="image-placeholder">
+                    <img src="assets/images/design-2.webp" alt="Фрезерно-гравіювальні послуги" loading="lazy">
+                    <div class="image-description">Фрезерно-гравіювальні послуги</div>
+                </div>
+            </div>
+            <!-- Додайте всі 83 зображення з коректними шляхами -->
+        </div>
+        <button class="load-more" id="load-more" aria-label="Завантажити ще фото">Завантажити ще</button>
     </section>
 
+    <div class="modal" id="modal">
+        <button class="close-modal" aria-label="Закрити зображення">✖</button>
+        <img class="modal-content" id="modal-image" alt="Зображення проєкту">
+    </div>
+
     <footer>
-        <div class="footer-links">
-            <a href="index.html#services">Послуги</a>
-            <a href="about.html">Про нас</a>
-            <a href="video-gallery.html">Відео</a>
-            <a href="contacts.html">Контакти</a>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html#services">Послуги</a>
+                <a href="about.html">Про нас</a>
+                <a href="video-gallery.html">Відео</a>
+                <a href="contacts.html">Контакти</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/backlight949?utm_source=qr&igsh=bTNneDh3MG9zZXlq" target="_blank" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.24 2.242 1.301 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.24-3.608 1.301-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.301-.975-.975-1.24-2.242-1.301-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.326-2.633 1.301-3.608.975-.975 2.242-1.24 3.608-1.301 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.877.404-3.943 1.47C2.043 2.609 1.705 4.033 1.639 5.486c-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.453.404 2.877 1.47 3.943 1.066 1.066 2.49 1.404 3.943 1.47 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.877-.404 3.943-1.47 1.066-1.066 1.404-2.49 1.47-3.943.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.404-2.877-1.47-3.943-1.066-1.066-2.49-1.404-3.943-1.47-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>© 2025 ArtMitin. Всі права захищено.</p>
         </div>
-        <p>© 2025 ArtMitin. Всі права захищено.</p>
     </footer>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 1",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (1).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 2",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (2).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 3",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (3).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 4",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (4).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 5",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (5).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 6",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (6).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 7",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (7).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 8",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (8).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 9",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (9).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 10",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (10).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 11",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (11).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 12",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (12).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 13",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (13).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 14",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (14).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 15",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (15).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 16",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (16).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 17",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (17).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 18",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (18).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 19",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (19).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 20",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (20).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 21",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (21).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 22",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (22).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 23",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (23).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 24",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (24).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 25",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (25).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 26",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (26).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 27",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (27).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 28",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (28).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 29",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (29).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 30",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (30).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 31",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (31).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 32",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (32).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 33",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (33).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 34",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (34).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 35",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (35).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 36",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (36).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 37",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (37).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 38",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (38).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 39",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (39).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 40",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (40).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 41",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (41).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 42",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (42).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 43",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (43).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 44",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (44).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 45",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (45).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 46",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (46).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 47",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (47).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 48",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (48).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 49",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (49).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 50",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (50).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 51",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (51).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 52",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (52).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 53",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (53).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 54",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (54).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 55",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (55).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 56",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (56).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 57",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (57).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 58",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (58).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 59",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (59).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 60",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (60).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 61",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (61).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 62",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (62).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 63",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (63).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 64",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (64).jpg",
+        "uploadDate": "2025-01-01"
+    },
+    {
+        "@type": "ImageObject",
+        "name": "Банери, вивіски, Білборди, LED екрани 2025 - 65",
+        "description": "Фотографія білборда для рекламної кампанії від ArtMitin.",
+        "contentUrl": "assets/images/baner2025 (65).jpg",
+        "uploadDate": "2025-01-01"
+    },
+            {
+                "@type": "ImageObject",
+                "name": "Банер Смак 1",
+                "description": "Фотографія білборда для рекламної кампанії Смак від ArtMitin.",
+                "contentUrl": "assets/images/baner-1.jpg",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Банер Смак 2",
+                "description": "Фотографія білборда для рекламної кампанії Смак від ArtMitin.",
+                "contentUrl": "assets/images/baner-2.jpg",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Банер Смак 3",
+                "description": "Фотографія білборда для рекламної кампанії Смак від ArtMitin.",
+                "contentUrl": "assets/images/baner-3.jpg",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Банер Смак 4",
+                "description": "Фотографія білборда для рекламної кампанії Смак від ArtMitin.",
+                "contentUrl": "assets/images/baner-4.jpg",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Банер Стоматологія",
+                "description": "Фотографія рекламного банера для стоматологічної клініки від ArtMitin.",
+                "contentUrl": "assets/images/baner-5.jpg",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Вакуумна формовка",
+                "description": "Приклад вакуумної формовки для рекламних конструкцій від ArtMitin.",
+                "contentUrl": "assets/images/printing-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Комбіновані вивіски",
+                "description": "Фотографія комбінованої неонової вивіски від ArtMitin.",
+                "contentUrl": "assets/images/neon-sign-1.png",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Світлові вивіски",
+                "description": "Фотографія світлової неонової вивіски від ArtMitin.",
+                "contentUrl": "assets/images/neon-sign-3.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "LED монохромне табло",
+                "description": "Фотографія монохромного LED-табло від ArtMitin.",
+                "contentUrl": "assets/images/led-screen-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Повноколірний вуличний екран",
+                "description": "Фотографія повноколірного вуличного LED-екрана від ArtMitin.",
+                "contentUrl": "assets/images/led-screen-2.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Сітілайти",
+                "description": "Фотографія сітілайта від ArtMitin.",
+                "contentUrl": "assets/images/city-light-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Об’ємні світлові вивіски",
+                "description": "Фотографія об’ємної світлової вивіски від ArtMitin.",
+                "contentUrl": "assets/images/volume-sign-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Широкоформатний друк",
+                "description": "Приклад широкоформатного друку для білборда від ArtMitin.",
+                "contentUrl": "assets/images/banner-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Оренда рекламних носіїв",
+                "description": "Фотографія рекламного носія, доступного для оренди від ArtMitin.",
+                "contentUrl": "assets/images/banner-2.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Міські меблі",
+                "description": "Фотографія міських меблів з рекламними елементами від ArtMitin.",
+                "contentUrl": "assets/images/furniture-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Світлова лаконічна реклама",
+                "description": "Фотографія світлової реклами від ArtMitin.",
+                "contentUrl": "assets/images/printing-3.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Оформлення АЗС",
+                "description": "Фотографія оформлення автозаправної станції від ArtMitin.",
+                "contentUrl": "assets/images/design-1.webp",
+                "uploadDate": "2025-01-01"
+            },
+            {
+                "@type": "ImageObject",
+                "name": "Фрезерно-гравіювальні послуги",
+                "description": "Приклад фрезерно-гравіювальних робіт для реклами від ArtMitin.",
+                "contentUrl": "assets/images/design-2.webp",
+                "uploadDate": "2025-01-01"
+            }
+        ]
+    }
+    </script>
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -366,15 +1542,93 @@
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Navigation and burger menu handling
-        document.querySelector('nav').addEventListener('click', (e) => {
-            const link = e.target.closest('a[data-section]');
-            if (link) {
-                e.preventDefault();
-                window.location.href = link.href;
+        // Burger menu toggle with auto-close on link click
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Gallery filter and pagination
+        const loadMoreBtn = document.getElementById("load-more");
+        const allItems = Array.from(document.querySelectorAll(".image-item"));
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const itemsPerPage = 12;
+        let currentPage = 1;
+        let currentFilter = "all";
+
+        function updateVisibility() {
+            allItems.forEach(item => item.style.display = "none");
+            const filteredItems = allItems.filter(item => 
+                currentFilter === "all" || item.dataset.category === currentFilter
+            );
+            currentPage = 1;
+            showPage(filteredItems, currentPage);
+            loadMoreBtn.style.display = filteredItems.length > itemsPerPage ? "block" : "none";
+        }
+
+        function showPage(items, page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            allItems.forEach(item => item.style.display = "none");
+            items.slice(start, end).forEach(item => item.style.display = "block");
+            loadMoreBtn.style.display = end < items.length ? "block" : "none";
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                currentFilter = button.dataset.filter;
+                updateVisibility();
+            });
+        });
+
+        loadMoreBtn.addEventListener("click", () => {
+            const filteredItems = allItems.filter(item => 
+                currentFilter === "all" || item.dataset.category === currentFilter
+            );
+            currentPage++;
+            showPage(filteredItems, currentPage);
+        });
+
+        updateVisibility();
+
+        // Modal for image preview
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.querySelector('.close-modal');
+        allItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                const imgAlt = item.querySelector('img').alt;
+                modalImage.src = imgSrc;
+                modalImage.alt = imgAlt;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
-            if (e.target.classList.contains('burger')) {
-                document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Keyboard accessibility for modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     </script>
