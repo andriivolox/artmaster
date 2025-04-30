@@ -8,24 +8,23 @@
     <meta name="keywords" content="ArtMitin, контакти, зовнішня реклама, рекламні рішення, Україна">
     <meta name="author" content="ArtMitin">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="ArtMitin" />
     <link rel="manifest" href="assets/images/site.webmanifest" />
     <meta name="theme-color" content="#FF6200">
     <meta property="og:title" content="ArtMitin - Контакти">
     <meta property="og:description" content="Готові зробити ваш бренд помітним? Зв’яжіться з ArtMitin через телефон, Viber або Instagram!">
-    <meta property="og:image" content="https://artmitin.site/assets/images/hero-bg.webp">
-    <meta property="og:url" content="https://artmitin.site/contacts.html">
+    <meta property="og:image" content="https://artmitin.site/hero-bg.webp">
+    <meta property="og:url" content="https://artmitin.site/contacts">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="uk_UA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ArtMitin - Контакти">
     <meta name="twitter:description" content="Готові зробити ваш бренд помітним? Зв’яжіться з ArtMitin через телефон, Viber або Instagram!">
-    <meta name="twitter:image" content="https://artmitin.site/assets/images/hero-bg.webp">
+    <meta name="twitter:image" content="https://artmitin.site/hero-bg.webp">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -335,8 +334,8 @@
                 <img src="assets/images/favicon-48x48.webp" alt="Логотип ArtMitin">
                 ArtMitin
             </a>
-            <button class="burger" aria-label="Відкрити меню">☰</button>
-            <div class="nav-links">
+            <button class="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html#services">Послуги</a>
                 <a href="about.html">Про нас</a>
                 <a href="gallery.html">Фото</a>
@@ -348,7 +347,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Зв’яжіться з нами</h1>
-            <p>Готові втілити ваші ідеї в яскраву рекламу? Напишіть або зателефонуйте нам!</p>
+            <p>Ми готові втілити ваші ідеї в яскраву рекламу. Напишіть або зателефонуйте нам!</p>
         </div>
     </section>
 
@@ -374,7 +373,7 @@
                 </div>
             </div>
             <p>Маєте запитання чи ідею? Ми готові допомогти вам зробити ваш бренд незабутнім!</p>
-            <a href="tel:+380674290579" class="cta-button">Зателефонувати зараз</a>
+            <a href="tel:+380674290579" class="cta-button" aria-label="Зателефонувати за номером +380674290579">Зателефонувати зараз</a>
         </div>
     </section>
 
@@ -397,6 +396,23 @@
         </div>
     </footer>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArtMitin",
+      "description": "Українська компанія, що спеціалізується на зовнішній рекламі: білборди, LED-екрани, неонові вивіски.",
+      "url": "https://artmitin.site",
+      "logo": "https://artmitin.site/assets/images/favicon-48x48.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+380674290579",
+        "contactType": "Customer Service"
+      },
+      "sameAs": ["https://www.instagram.com/backlight949"]
+    }
+    </script>
+
     <script>
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -404,27 +420,22 @@
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Burger menu toggle
-        document.querySelector('.burger').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+        // Burger menu toggle with aria-expanded
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            const isExpanded = navLinks.classList.toggle('active');
+            burger.setAttribute('aria-expanded', isExpanded);
         });
 
-        // Navigation click handling
-        document.querySelector('nav').addEventListener('click', (e) => {
-            const link = e.target.closest('a[data-section]');
-            if (link) {
-                e.preventDefault();
-                window.location.href = link.href;
-            }
-        });
-
-        document.querySelector('footer').addEventListener('click', (e) => {
-            const link = e.target.closest('a[data-section]');
-            if (link) {
-                e.preventDefault();
-                window.location.href = link.href;
-            }
+        // Auto-close burger menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.setAttribute('aria-expanded', 'false');
+            });
         });
     </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93861912cb867bca',t:'MTc0NjAwNjIzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
